@@ -1,0 +1,543 @@
+{
+  "kpis": {
+    "total_users": 600,
+    "avg_screen_time_hours": 3.75,
+    "median_screen_time_hours": 3.41,
+    "avg_posts_per_week": 5.53,
+    "total_weekly_posts": 3316,
+    "avg_likes_per_post": 194.2,
+    "median_likes_per_post": 80.0,
+    "avg_followers": 4622.3,
+    "median_followers": 1140.0,
+    "avg_engagement_rate": 8.07,
+    "top_platform": "Instagram",
+    "screen_time_health_breakdown": {
+      "healthy": 154,
+      "moderate": 333,
+      "heavy": 113
+    }
+  },
+  "descriptive_statistics": {
+    "daily_screen_time_hours": {
+      "label": "Daily Screen Time (Hours)",
+      "count": 600,
+      "mean": 3.752,
+      "median": 3.41,
+      "mode": 2.85,
+      "std_dev": 1.839,
+      "variance": 3.381,
+      "sem": 0.0751,
+      "min": 0.81,
+      "max": 12.0,
+      "range": 11.19,
+      "q1": 2.468,
+      "q2": 3.41,
+      "q3": 4.672,
+      "iqr": 2.205,
+      "skewness": 1.235,
+      "skew_interpretation": "Right-skewed (Positive skew: concentration of lower values with long upper tail of high performers/power users)",
+      "kurtosis": 2.237,
+      "kurt_interpretation": "Leptokurtic (Heavy tails, higher probability of extreme outliers/viral posts)"
+    },
+    "weekend_screen_time_hours": {
+      "label": "Weekend Screen Time (Hours)",
+      "count": 600,
+      "mean": 4.526,
+      "median": 4.13,
+      "mode": 4.19,
+      "std_dev": 2.236,
+      "variance": 5.0,
+      "sem": 0.0913,
+      "min": 0.95,
+      "max": 14.0,
+      "range": 13.05,
+      "q1": 2.958,
+      "q2": 4.13,
+      "q3": 5.708,
+      "iqr": 2.75,
+      "skewness": 1.177,
+      "skew_interpretation": "Right-skewed (Positive skew: concentration of lower values with long upper tail of high performers/power users)",
+      "kurtosis": 1.82,
+      "kurt_interpretation": "Leptokurtic (Heavy tails, higher probability of extreme outliers/viral posts)"
+    },
+    "posts_per_week": {
+      "label": "Posts Per Week",
+      "count": 600,
+      "mean": 5.527,
+      "median": 2.0,
+      "mode": 1.0,
+      "std_dev": 7.471,
+      "variance": 55.812,
+      "sem": 0.305,
+      "min": 0.0,
+      "max": 27.0,
+      "range": 27.0,
+      "q1": 1.0,
+      "q2": 2.0,
+      "q3": 5.0,
+      "iqr": 4.0,
+      "skewness": 1.606,
+      "skew_interpretation": "Right-skewed (Positive skew: concentration of lower values with long upper tail of high performers/power users)",
+      "kurtosis": 1.149,
+      "kurt_interpretation": "Leptokurtic (Heavy tails, higher probability of extreme outliers/viral posts)"
+    },
+    "avg_likes_per_post": {
+      "label": "Avg Likes Per Post",
+      "count": 600,
+      "mean": 194.175,
+      "median": 80.0,
+      "mode": 5.0,
+      "std_dev": 342.563,
+      "variance": 117349.393,
+      "sem": 13.9851,
+      "min": 3.0,
+      "max": 3908.0,
+      "range": 3905.0,
+      "q1": 30.0,
+      "q2": 80.0,
+      "q3": 205.0,
+      "iqr": 175.0,
+      "skewness": 4.771,
+      "skew_interpretation": "Right-skewed (Positive skew: concentration of lower values with long upper tail of high performers/power users)",
+      "kurtosis": 33.391,
+      "kurt_interpretation": "Leptokurtic (Heavy tails, higher probability of extreme outliers/viral posts)"
+    },
+    "total_followers": {
+      "label": "Total Followers",
+      "count": 600,
+      "mean": 4622.283,
+      "median": 1140.0,
+      "mode": 73.0,
+      "std_dev": 12241.489,
+      "variance": 149854049.656,
+      "sem": 499.7567,
+      "min": 62.0,
+      "max": 187579.0,
+      "range": 187517.0,
+      "q1": 371.25,
+      "q2": 1140.0,
+      "q3": 3494.0,
+      "iqr": 3122.75,
+      "skewness": 8.172,
+      "skew_interpretation": "Right-skewed (Positive skew: concentration of lower values with long upper tail of high performers/power users)",
+      "kurtosis": 97.026,
+      "kurt_interpretation": "Leptokurtic (Heavy tails, higher probability of extreme outliers/viral posts)"
+    },
+    "following_count": {
+      "label": "Following Count",
+      "count": 600,
+      "mean": 1421.627,
+      "median": 880.5,
+      "mode": 3500.0,
+      "std_dev": 1229.558,
+      "variance": 1511814.017,
+      "sem": 50.1965,
+      "min": 71.0,
+      "max": 3500.0,
+      "range": 3429.0,
+      "q1": 377.0,
+      "q2": 880.5,
+      "q3": 2350.5,
+      "iqr": 1973.5,
+      "skewness": 0.739,
+      "skew_interpretation": "Right-skewed (Positive skew: concentration of lower values with long upper tail of high performers/power users)",
+      "kurtosis": -1.026,
+      "kurt_interpretation": "Platykurtic (Flat distribution, fewer extreme outliers)"
+    },
+    "comments_per_post": {
+      "label": "Comments Per Post",
+      "count": 600,
+      "mean": 13.75,
+      "median": 5.0,
+      "mode": 1.0,
+      "std_dev": 27.497,
+      "variance": 756.058,
+      "sem": 1.1225,
+      "min": 0.0,
+      "max": 335.0,
+      "range": 335.0,
+      "q1": 2.0,
+      "q2": 5.0,
+      "q3": 13.0,
+      "iqr": 11.0,
+      "skewness": 5.845,
+      "skew_interpretation": "Right-skewed (Positive skew: concentration of lower values with long upper tail of high performers/power users)",
+      "kurtosis": 49.941,
+      "kurt_interpretation": "Leptokurtic (Heavy tails, higher probability of extreme outliers/viral posts)"
+    },
+    "shares_per_post": {
+      "label": "Shares Per Post",
+      "count": 600,
+      "mean": 8.655,
+      "median": 2.0,
+      "mode": 0.0,
+      "std_dev": 20.45,
+      "variance": 418.213,
+      "sem": 0.8349,
+      "min": 0.0,
+      "max": 304.0,
+      "range": 304.0,
+      "q1": 1.0,
+      "q2": 2.0,
+      "q3": 8.0,
+      "iqr": 7.0,
+      "skewness": 7.519,
+      "skew_interpretation": "Right-skewed (Positive skew: concentration of lower values with long upper tail of high performers/power users)",
+      "kurtosis": 84.481,
+      "kurt_interpretation": "Leptokurtic (Heavy tails, higher probability of extreme outliers/viral posts)"
+    },
+    "engagement_rate": {
+      "label": "Engagement Rate (%)",
+      "count": 600,
+      "mean": 8.069,
+      "median": 7.33,
+      "mode": 4.88,
+      "std_dev": 4.122,
+      "variance": 16.988,
+      "sem": 0.1683,
+      "min": 0.84,
+      "max": 22.09,
+      "range": 21.25,
+      "q1": 4.88,
+      "q2": 7.33,
+      "q3": 10.422,
+      "iqr": 5.542,
+      "skewness": 0.859,
+      "skew_interpretation": "Right-skewed (Positive skew: concentration of lower values with long upper tail of high performers/power users)",
+      "kurtosis": 0.337,
+      "kurt_interpretation": "Mesokurtic (Normal-like tail behavior)"
+    },
+    "age": {
+      "label": "User Age (Years)",
+      "count": 600,
+      "mean": 31.292,
+      "median": 28.0,
+      "mode": 22.0,
+      "std_dev": 12.729,
+      "variance": 162.04,
+      "sem": 0.5197,
+      "min": 16.0,
+      "max": 64.0,
+      "range": 48.0,
+      "q1": 21.75,
+      "q2": 28.0,
+      "q3": 38.0,
+      "iqr": 16.25,
+      "skewness": 0.943,
+      "skew_interpretation": "Right-skewed (Positive skew: concentration of lower values with long upper tail of high performers/power users)",
+      "kurtosis": 0.028,
+      "kurt_interpretation": "Mesokurtic (Normal-like tail behavior)"
+    }
+  },
+  "correlations": {
+    "columns": [
+      "daily_screen_time_hours",
+      "posts_per_week",
+      "avg_likes_per_post",
+      "total_followers",
+      "following_count",
+      "engagement_rate",
+      "age"
+    ],
+    "labels": {
+      "daily_screen_time_hours": "Daily Screen Time (Hours)",
+      "posts_per_week": "Posts Per Week",
+      "avg_likes_per_post": "Avg Likes Per Post",
+      "total_followers": "Total Followers",
+      "following_count": "Following Count",
+      "engagement_rate": "Engagement Rate (%)",
+      "age": "User Age (Years)"
+    },
+    "pearson": {
+      "daily_screen_time_hours": {
+        "daily_screen_time_hours": 1.0,
+        "posts_per_week": 0.001,
+        "avg_likes_per_post": 0.049,
+        "total_followers": 0.095,
+        "following_count": 0.033,
+        "engagement_rate": -0.026,
+        "age": -0.006
+      },
+      "posts_per_week": {
+        "daily_screen_time_hours": 0.001,
+        "posts_per_week": 1.0,
+        "avg_likes_per_post": 0.484,
+        "total_followers": 0.398,
+        "following_count": 0.465,
+        "engagement_rate": -0.313,
+        "age": 0.022
+      },
+      "avg_likes_per_post": {
+        "daily_screen_time_hours": 0.049,
+        "posts_per_week": 0.484,
+        "avg_likes_per_post": 1.0,
+        "total_followers": 0.884,
+        "following_count": 0.216,
+        "engagement_rate": -0.242,
+        "age": -0.022
+      },
+      "total_followers": {
+        "daily_screen_time_hours": 0.095,
+        "posts_per_week": 0.398,
+        "avg_likes_per_post": 0.884,
+        "total_followers": 1.0,
+        "following_count": 0.092,
+        "engagement_rate": -0.31,
+        "age": -0.015
+      },
+      "following_count": {
+        "daily_screen_time_hours": 0.033,
+        "posts_per_week": 0.465,
+        "avg_likes_per_post": 0.216,
+        "total_followers": 0.092,
+        "following_count": 1.0,
+        "engagement_rate": -0.367,
+        "age": -0.013
+      },
+      "engagement_rate": {
+        "daily_screen_time_hours": -0.026,
+        "posts_per_week": -0.313,
+        "avg_likes_per_post": -0.242,
+        "total_followers": -0.31,
+        "following_count": -0.367,
+        "engagement_rate": 1.0,
+        "age": 0.046
+      },
+      "age": {
+        "daily_screen_time_hours": -0.006,
+        "posts_per_week": 0.022,
+        "avg_likes_per_post": -0.022,
+        "total_followers": -0.015,
+        "following_count": -0.013,
+        "engagement_rate": 0.046,
+        "age": 1.0
+      }
+    },
+    "spearman": {
+      "daily_screen_time_hours": {
+        "daily_screen_time_hours": 1.0,
+        "posts_per_week": 0.024,
+        "avg_likes_per_post": 0.042,
+        "total_followers": 0.044,
+        "following_count": 0.058,
+        "engagement_rate": -0.036,
+        "age": 0.02
+      },
+      "posts_per_week": {
+        "daily_screen_time_hours": 0.024,
+        "posts_per_week": 1.0,
+        "avg_likes_per_post": 0.51,
+        "total_followers": 0.532,
+        "following_count": 0.379,
+        "engagement_rate": -0.274,
+        "age": 0.005
+      },
+      "avg_likes_per_post": {
+        "daily_screen_time_hours": 0.042,
+        "posts_per_week": 0.51,
+        "avg_likes_per_post": 1.0,
+        "total_followers": 0.94,
+        "following_count": 0.745,
+        "engagement_rate": -0.214,
+        "age": -0.011
+      },
+      "total_followers": {
+        "daily_screen_time_hours": 0.044,
+        "posts_per_week": 0.532,
+        "avg_likes_per_post": 0.94,
+        "total_followers": 1.0,
+        "following_count": 0.802,
+        "engagement_rate": -0.507,
+        "age": -0.018
+      },
+      "following_count": {
+        "daily_screen_time_hours": 0.058,
+        "posts_per_week": 0.379,
+        "avg_likes_per_post": 0.745,
+        "total_followers": 0.802,
+        "following_count": 1.0,
+        "engagement_rate": -0.346,
+        "age": -0.017
+      },
+      "engagement_rate": {
+        "daily_screen_time_hours": -0.036,
+        "posts_per_week": -0.274,
+        "avg_likes_per_post": -0.214,
+        "total_followers": -0.507,
+        "following_count": -0.346,
+        "engagement_rate": 1.0,
+        "age": 0.03
+      },
+      "age": {
+        "daily_screen_time_hours": 0.02,
+        "posts_per_week": 0.005,
+        "avg_likes_per_post": -0.011,
+        "total_followers": -0.018,
+        "following_count": -0.017,
+        "engagement_rate": 0.03,
+        "age": 1.0
+      }
+    },
+    "insights": [
+      {
+        "var1": "Avg Likes Per Post",
+        "var2": "Total Followers",
+        "correlation": 0.884,
+        "strength": "Strong",
+        "direction": "Positive",
+        "p_value": 0.0,
+        "significance": "Statistically Significant (p < 0.05)",
+        "explanation": "Strong positive relationship (r = 0.88). As Avg Likes Per Post increases, Total Followers tends to increase."
+      },
+      {
+        "var1": "Posts Per Week",
+        "var2": "Avg Likes Per Post",
+        "correlation": 0.484,
+        "strength": "Moderate",
+        "direction": "Positive",
+        "p_value": 0.0,
+        "significance": "Statistically Significant (p < 0.05)",
+        "explanation": "Moderate positive relationship (r = 0.48). As Posts Per Week increases, Avg Likes Per Post tends to increase."
+      },
+      {
+        "var1": "Posts Per Week",
+        "var2": "Following Count",
+        "correlation": 0.465,
+        "strength": "Moderate",
+        "direction": "Positive",
+        "p_value": 0.0,
+        "significance": "Statistically Significant (p < 0.05)",
+        "explanation": "Moderate positive relationship (r = 0.47). As Posts Per Week increases, Following Count tends to increase."
+      },
+      {
+        "var1": "Posts Per Week",
+        "var2": "Total Followers",
+        "correlation": 0.398,
+        "strength": "Moderate",
+        "direction": "Positive",
+        "p_value": 0.0,
+        "significance": "Statistically Significant (p < 0.05)",
+        "explanation": "Moderate positive relationship (r = 0.40). As Posts Per Week increases, Total Followers tends to increase."
+      },
+      {
+        "var1": "Following Count",
+        "var2": "Engagement Rate (%)",
+        "correlation": -0.367,
+        "strength": "Moderate",
+        "direction": "Negative",
+        "p_value": 0.0,
+        "significance": "Statistically Significant (p < 0.05)",
+        "explanation": "Moderate negative relationship (r = -0.37). As Following Count increases, Engagement Rate (%) tends to decrease."
+      },
+      {
+        "var1": "Posts Per Week",
+        "var2": "Engagement Rate (%)",
+        "correlation": -0.313,
+        "strength": "Weak",
+        "direction": "Negative",
+        "p_value": 0.0,
+        "significance": "Statistically Significant (p < 0.05)",
+        "explanation": "Weak negative relationship (r = -0.31). As Posts Per Week increases, Engagement Rate (%) tends to decrease."
+      },
+      {
+        "var1": "Total Followers",
+        "var2": "Engagement Rate (%)",
+        "correlation": -0.31,
+        "strength": "Weak",
+        "direction": "Negative",
+        "p_value": 0.0,
+        "significance": "Statistically Significant (p < 0.05)",
+        "explanation": "Weak negative relationship (r = -0.31). As Total Followers increases, Engagement Rate (%) tends to decrease."
+      },
+      {
+        "var1": "Avg Likes Per Post",
+        "var2": "Engagement Rate (%)",
+        "correlation": -0.242,
+        "strength": "Weak",
+        "direction": "Negative",
+        "p_value": 0.0,
+        "significance": "Statistically Significant (p < 0.05)",
+        "explanation": "Weak negative relationship (r = -0.24). As Avg Likes Per Post increases, Engagement Rate (%) tends to decrease."
+      },
+      {
+        "var1": "Avg Likes Per Post",
+        "var2": "Following Count",
+        "correlation": 0.216,
+        "strength": "Weak",
+        "direction": "Positive",
+        "p_value": 0.0,
+        "significance": "Statistically Significant (p < 0.05)",
+        "explanation": "Weak positive relationship (r = 0.22). As Avg Likes Per Post increases, Following Count tends to increase."
+      }
+    ]
+  },
+  "multiple_regression": {
+    "available": true,
+    "target": "engagement_rate",
+    "target_label": "Engagement Rate (%)",
+    "intercept": 9.1415,
+    "coefficients": {
+      "daily_screen_time_hours": {
+        "label": "Daily Screen Time (Hours)",
+        "coefficient": -0.01167,
+        "impact": "Decreases engagement"
+      },
+      "posts_per_week": {
+        "label": "Posts Per Week",
+        "coefficient": -0.12407,
+        "impact": "Decreases engagement"
+      },
+      "total_followers": {
+        "label": "Total Followers",
+        "coefficient": -7e-05,
+        "impact": "Decreases engagement"
+      }
+    },
+    "r_squared": 0.1389,
+    "adjusted_r_squared": 0.1346,
+    "formula": "Engagement = 9.14 + (-0.0117 * ScreenTime) + (-0.1241 * Posts) + (-0.000074 * Followers)"
+  },
+  "hypothesis_tests": {
+    "screen_time_vs_engagement_ttest": {
+      "test_name": "Two-Sample Independent T-Test (Welch's)",
+      "hypothesis": "H\u2080: High screen-time users (>4h) have the same engagement rate as low screen-time users (\u22644h). H\u2081: Means are significantly different.",
+      "group1_label": "High Screen Time (>4h)",
+      "group1_mean": 7.94,
+      "group1_count": 227,
+      "group2_label": "Low Screen Time (\u22644h)",
+      "group2_mean": 8.15,
+      "group2_count": 373,
+      "t_statistic": -0.595,
+      "p_value": 0.5524,
+      "is_significant": false,
+      "conclusion": "Fail to Reject H\u2080 (No significant difference detected at \u03b1 = 0.05)"
+    },
+    "weekend_vs_weekday_ttest": {
+      "test_name": "Paired T-Test (Weekend vs Weekday Screen Time)",
+      "hypothesis": "H\u2080: Weekend screen time is equal to Weekday daily screen time. H\u2081: Weekend screen time is significantly higher.",
+      "weekend_mean": 4.53,
+      "weekday_mean": 3.75,
+      "mean_difference": 0.77,
+      "t_statistic": 36.744,
+      "p_value": 0.0,
+      "is_significant": true,
+      "conclusion": "Weekend screen time is significantly higher by 0.77 hours (p < 0.001)."
+    },
+    "platform_screen_time_anova": {
+      "test_name": "One-Way ANOVA (Screen Time Across Platforms)",
+      "hypothesis": "H\u2080: Mean daily screen time is identical across all social platforms. H\u2081: At least one platform has a significantly different screen time.",
+      "f_statistic": 11.826,
+      "p_value": 0.0,
+      "is_significant": true,
+      "conclusion": "Significant variation in screen time across platforms (p < 0.05). Platforms like TikTok and Instagram command higher user attention."
+    },
+    "post_type_engagement_anova": {
+      "test_name": "One-Way ANOVA (Engagement Across Post Types)",
+      "hypothesis": "H\u2080: Engagement rate is identical across Reels, Carousels, Photos, and Text. H\u2081: Content format significantly drives engagement rate.",
+      "f_statistic": 27.103,
+      "p_value": 0.0,
+      "is_significant": true,
+      "conclusion": "Strong statistical evidence that content format affects engagement (p < 0.001). Video/Reels and Carousels demonstrate superior engagement."
+    }
+  }
+}

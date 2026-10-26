@@ -1,0 +1,601 @@
+user_id,age,gender,platform,daily_screen_time_hours,weekend_screen_time_hours,posts_per_week,avg_likes_per_post,comments_per_post,shares_per_post,total_followers,following_count,post_type,engagement_rate,device,primary_usage_purpose
+USR_1000,23,Female,Facebook,1.82,2.38,2,315,34,23,2601,2031,Reel/Video,14.3,iOS,Professional/Networking
+USR_1001,37,Female,YouTube,5.04,6.1,9,707,32,20,12740,3500,Carousel,5.96,iOS,Content Creation
+USR_1002,21,Female,TikTok,4.06,5.22,1,10,0,0,177,341,Photo/Image,5.65,Android,Socializing
+USR_1003,23,Male,LinkedIn,3.44,3.92,0,97,7,7,896,772,Photo/Image,12.39,iOS,Entertainment
+USR_1004,17,Male,Instagram,3.94,4.78,8,313,15,18,11312,3500,Photo/Image,3.06,iOS,Entertainment
+USR_1005,27,Female,TikTok,2.21,2.55,13,655,52,15,23144,255,Photo/Image,3.12,Desktop/Web,Content Creation
+USR_1006,16,Male,YouTube,2.85,3.35,2,102,11,6,2354,2807,Carousel,5.06,Android,Socializing
+USR_1007,17,Female,Instagram,4.45,5.65,21,502,39,31,15727,3500,Carousel,3.64,Android,Content Creation
+USR_1008,27,Female,Facebook,4.14,5.44,0,69,6,3,773,548,Photo/Image,10.09,Android,Entertainment
+USR_1009,19,Male,Twitter/X,3.97,4.31,1,159,16,9,1195,946,Reel/Video,15.4,Desktop/Web,Socializing
+USR_1010,16,Female,YouTube,2.25,2.79,1,261,17,7,3874,3389,Reel/Video,7.36,Android,Content Creation
+USR_1011,28,Male,Instagram,2.01,2.46,0,15,0,0,152,259,Carousel,9.87,iOS,Socializing
+USR_1012,21,Female,Instagram,3.17,3.44,23,205,9,13,6015,3500,Photo/Image,3.77,Android,Socializing
+USR_1013,20,Non-binary,TikTok,7.18,8.0,20,193,20,12,3380,1912,Photo/Image,6.66,Android,Content Creation
+USR_1014,20,Female,Twitter/X,1.98,2.26,1,62,7,2,1180,748,Photo/Image,6.02,iOS,Entertainment
+USR_1015,63,Female,Instagram,4.24,4.66,2,217,18,3,3773,3396,Carousel,6.31,iOS,Entertainment
+USR_1016,20,Male,TikTok,4.61,5.18,0,28,2,1,338,426,Photo/Image,9.17,iOS,Socializing
+USR_1017,28,Female,Twitter/X,3.81,4.31,1,5,0,0,73,190,Carousel,6.85,Desktop/Web,Entertainment
+USR_1018,27,Non-binary,Instagram,7.31,8.41,17,428,13,23,5449,3500,Carousel,8.52,iOS,Content Creation
+USR_1019,43,Male,YouTube,7.28,9.28,20,934,61,31,30004,335,Reel/Video,3.42,Desktop/Web,Content Creation
+USR_1020,17,Male,Instagram,2.64,3.22,1,117,11,1,1461,1346,Reel/Video,8.83,Android,Professional/Networking
+USR_1021,16,Male,Facebook,1.17,1.57,20,703,65,21,7424,3500,Carousel,10.63,Android,Socializing
+USR_1022,51,Male,TikTok,2.77,3.25,1,42,4,1,499,821,Reel/Video,9.42,Android,Entertainment
+USR_1023,25,Male,Instagram,3.57,4.56,3,13,0,0,160,330,Text/Status,8.12,iOS,Entertainment
+USR_1024,33,Male,TikTok,3.19,4.18,5,134,9,4,1418,844,Reel/Video,10.37,iOS,Content Creation
+USR_1025,16,Male,TikTok,9.1,11.41,1,25,2,1,256,332,Reel/Video,10.94,iOS,Entertainment
+USR_1026,22,Female,Twitter/X,2.73,3.2,3,338,36,26,14203,3500,Text/Status,2.82,Android,Content Creation
+USR_1027,16,Female,Twitter/X,3.63,4.63,3,127,8,3,1528,1855,Photo/Image,9.03,iOS,Content Creation
+USR_1028,63,Male,YouTube,3.98,4.42,1,42,1,2,345,452,Reel/Video,13.04,iOS,Entertainment
+USR_1029,25,Female,Instagram,2.96,3.4,1,33,3,2,332,300,Carousel,11.45,iOS,Entertainment
+USR_1030,22,Female,Instagram,1.45,1.76,1,80,8,4,633,451,Photo/Image,14.53,Desktop/Web,Socializing
+USR_1031,16,Female,Instagram,3.33,4.07,5,41,4,1,525,417,Photo/Image,8.76,iOS,Professional/Networking
+USR_1032,40,Female,YouTube,12.0,12.68,1,134,4,10,3226,2171,Reel/Video,4.59,Android,Entertainment
+USR_1033,18,Male,LinkedIn,1.12,1.49,3,102,9,1,913,1111,Carousel,12.27,iOS,News/Information
+USR_1034,18,Male,TikTok,1.66,2.09,1,30,2,1,288,358,Carousel,11.46,Android,Socializing
+USR_1035,20,Female,Instagram,8.26,9.9,2,404,16,20,9432,3500,Reel/Video,4.66,iOS,News/Information
+USR_1036,22,Male,YouTube,5.03,6.69,6,272,29,18,8185,3500,Carousel,3.9,Android,Entertainment
+USR_1037,23,Male,Twitter/X,2.94,3.47,3,214,8,4,2001,2744,Carousel,11.29,Android,Entertainment
+USR_1038,18,Female,Twitter/X,4.99,6.71,3,35,4,0,333,346,Photo/Image,11.71,iOS,Content Creation
+USR_1039,18,Male,LinkedIn,1.34,1.61,3,39,3,2,1155,877,Photo/Image,3.81,Android,Professional/Networking
+USR_1040,56,Female,Instagram,3.29,3.57,0,46,4,2,1078,806,Reel/Video,4.82,Android,Socializing
+USR_1041,17,Female,Instagram,5.31,6.79,2,7,0,0,97,238,Reel/Video,7.22,Android,Content Creation
+USR_1042,16,Non-binary,LinkedIn,5.05,6.33,7,2421,96,146,104656,381,Carousel,2.54,Android,Professional/Networking
+USR_1043,31,Female,YouTube,2.13,2.73,2,200,19,13,4101,2338,Carousel,5.66,iOS,Entertainment
+USR_1044,23,Male,TikTok,6.68,8.92,1,24,2,0,431,559,Photo/Image,6.03,Android,Socializing
+USR_1045,32,Male,Twitter/X,3.21,4.12,2,22,1,1,192,171,Photo/Image,12.5,Desktop/Web,Professional/Networking
+USR_1046,22,Female,Twitter/X,2.91,3.59,2,47,5,3,1132,1334,Reel/Video,4.86,Android,Socializing
+USR_1047,27,Male,YouTube,3.59,4.69,2,118,9,3,800,720,Reel/Video,16.25,Desktop/Web,Entertainment
+USR_1048,27,Male,YouTube,1.93,2.42,0,56,2,2,1144,694,Photo/Image,5.24,iOS,Content Creation
+USR_1049,59,Female,TikTok,5.79,6.79,2,127,9,3,919,860,Reel/Video,15.13,Android,Entertainment
+USR_1050,36,Male,TikTok,2.64,3.47,3,50,4,2,1401,818,Photo/Image,4.0,Android,Entertainment
+USR_1051,27,Male,TikTok,2.31,2.58,5,340,37,17,5095,3500,Reel/Video,7.73,iOS,News/Information
+USR_1052,55,Male,Twitter/X,4.03,5.1,13,418,44,30,18930,3500,Carousel,2.6,Android,Socializing
+USR_1053,34,Male,Twitter/X,3.86,5.07,1,20,0,0,203,248,Reel/Video,9.85,Android,Content Creation
+USR_1054,16,Female,Twitter/X,2.8,3.55,4,270,27,9,4530,3500,Photo/Image,6.75,iOS,Content Creation
+USR_1055,58,Male,Instagram,5.62,7.08,26,640,20,10,80051,875,Photo/Image,0.84,iOS,Entertainment
+USR_1056,42,Male,Twitter/X,5.14,6.56,1,1084,59,54,54928,364,Reel/Video,2.18,Android,Entertainment
+USR_1057,18,Male,Twitter/X,4.87,5.79,26,83,7,1,2788,3500,Reel/Video,3.26,iOS,Entertainment
+USR_1058,16,Male,YouTube,2.84,3.73,5,89,5,1,984,1407,Reel/Video,9.65,iOS,Entertainment
+USR_1059,24,Male,Twitter/X,4.27,4.74,1,5,0,0,86,216,Carousel,5.81,iOS,Content Creation
+USR_1060,62,Female,Twitter/X,2.97,3.23,1,110,7,7,1492,1568,Reel/Video,8.31,iOS,Socializing
+USR_1061,19,Male,TikTok,8.16,9.27,16,172,11,5,3219,2708,Carousel,5.84,Android,Socializing
+USR_1062,26,Male,TikTok,3.55,4.29,2,557,42,33,9876,3500,Text/Status,6.4,iOS,Entertainment
+USR_1063,37,Male,Instagram,2.94,3.54,2,22,1,0,274,387,Carousel,8.39,Android,Socializing
+USR_1064,17,Male,TikTok,2.85,3.69,4,22,1,0,112,170,Reel/Video,20.54,Desktop/Web,Socializing
+USR_1065,34,Female,YouTube,3.93,4.6,1,9,1,0,393,183,Text/Status,2.54,Android,Socializing
+USR_1066,19,Female,Twitter/X,3.34,3.99,1,11,1,0,91,137,Reel/Video,13.19,iOS,Entertainment
+USR_1067,21,Female,Instagram,4.3,4.53,26,747,87,38,21084,207,Photo/Image,4.14,Android,Socializing
+USR_1068,18,Female,Instagram,4.04,4.74,1,5,0,0,86,227,Carousel,5.81,iOS,Entertainment
+USR_1069,24,Male,YouTube,4.88,6.07,2,105,12,4,742,1005,Photo/Image,16.31,iOS,Entertainment
+USR_1070,34,Male,Instagram,3.13,3.3,2,10,0,0,86,134,Photo/Image,11.63,Android,Content Creation
+USR_1071,58,Male,Instagram,2.33,2.64,1,64,3,4,474,549,Reel/Video,14.98,Android,Entertainment
+USR_1072,36,Female,Instagram,2.24,2.49,24,1114,96,69,30776,535,Reel/Video,4.16,Android,Socializing
+USR_1073,37,Male,Instagram,5.36,5.7,3,69,5,2,1152,1387,Photo/Image,6.6,Desktop/Web,Entertainment
+USR_1074,23,Female,Instagram,4.27,5.1,24,243,13,9,3512,3195,Reel/Video,7.55,Android,Entertainment
+USR_1075,18,Female,TikTok,1.63,1.8,1,58,5,2,686,789,Text/Status,9.48,Android,Entertainment
+USR_1076,19,Male,TikTok,6.15,7.83,3,45,3,3,732,1088,Text/Status,6.97,Android,News/Information
+USR_1077,53,Male,LinkedIn,4.55,5.93,2,43,4,2,1339,1528,Carousel,3.66,iOS,Socializing
+USR_1078,44,Female,TikTok,2.72,3.3,1,6,0,0,148,125,Photo/Image,4.05,iOS,News/Information
+USR_1079,21,Female,Twitter/X,3.15,4.24,2,80,5,6,1574,1469,Photo/Image,5.78,Android,Socializing
+USR_1080,25,Female,Instagram,2.79,3.31,18,49,5,1,1669,1765,Text/Status,3.3,Android,Socializing
+USR_1081,20,Female,Instagram,4.58,5.51,1,30,2,1,325,406,Carousel,10.15,iOS,Socializing
+USR_1082,24,Male,Twitter/X,1.6,2.15,1,28,2,1,385,342,Photo/Image,8.05,iOS,Entertainment
+USR_1083,29,Female,Instagram,3.35,3.75,13,327,37,15,12403,3500,Reel/Video,3.06,iOS,Entertainment
+USR_1084,37,Male,TikTok,5.84,7.78,2,105,11,7,736,569,Reel/Video,16.71,Android,Entertainment
+USR_1085,38,Male,YouTube,6.29,6.69,1,7,0,0,142,360,Photo/Image,4.93,Android,Socializing
+USR_1086,23,Female,YouTube,4.37,5.17,0,13,0,0,217,267,Photo/Image,5.99,Desktop/Web,Entertainment
+USR_1087,29,Female,Instagram,2.97,3.18,1,83,9,5,928,549,Carousel,10.45,Android,Entertainment
+USR_1088,36,Female,TikTok,1.83,2.32,1,66,3,4,645,507,Reel/Video,11.32,Android,Entertainment
+USR_1089,23,Female,YouTube,2.56,3.16,2,27,2,0,345,601,Reel/Video,8.41,iOS,Socializing
+USR_1090,39,Female,Instagram,2.8,3.53,2,41,4,0,389,651,Reel/Video,11.57,iOS,Content Creation
+USR_1091,33,Male,YouTube,2.63,3.06,23,695,73,31,17118,3500,Reel/Video,4.67,iOS,Professional/Networking
+USR_1092,32,Female,Twitter/X,2.78,3.23,1,28,1,1,372,412,Reel/Video,8.06,Android,Entertainment
+USR_1093,58,Non-binary,Facebook,2.58,2.74,4,66,3,0,637,485,Photo/Image,10.83,iOS,Entertainment
+USR_1094,18,Female,Instagram,3.73,4.31,1,418,26,9,13925,3500,Photo/Image,3.25,Android,Entertainment
+USR_1095,16,Male,Twitter/X,4.65,6.18,0,16,0,0,140,230,Carousel,11.43,Android,Professional/Networking
+USR_1096,51,Male,TikTok,3.13,3.64,1,16,0,0,99,100,Reel/Video,16.16,iOS,Entertainment
+USR_1097,29,Male,TikTok,2.02,2.62,0,134,9,3,2042,2107,Reel/Video,7.15,Desktop/Web,Content Creation
+USR_1098,31,Male,Instagram,2.52,3.28,0,20,1,0,307,259,Photo/Image,6.84,Android,Socializing
+USR_1099,29,Male,Twitter/X,3.52,4.09,26,289,21,17,4548,3500,Carousel,7.19,iOS,Entertainment
+USR_1100,38,Male,Instagram,4.69,5.81,1,35,2,1,272,318,Reel/Video,13.97,iOS,Entertainment
+USR_1101,19,Male,TikTok,4.51,4.86,0,55,2,3,512,785,Carousel,11.72,Android,Entertainment
+USR_1102,29,Male,Instagram,6.2,6.7,2,553,65,20,6285,3500,Reel/Video,10.15,iOS,Professional/Networking
+USR_1103,39,Female,Twitter/X,2.49,2.65,22,506,29,32,16264,3500,Carousel,3.49,iOS,Socializing
+USR_1104,17,Female,Twitter/X,6.81,8.34,1,170,5,5,2274,2960,Carousel,7.92,Android,Socializing
+USR_1105,57,Male,Twitter/X,3.91,4.61,0,15,0,0,141,274,Reel/Video,10.64,Desktop/Web,Socializing
+USR_1106,27,Male,Instagram,1.11,1.35,1,19,1,1,182,186,Photo/Image,11.54,iOS,Socializing
+USR_1107,25,Male,Instagram,7.77,9.37,2,9,0,0,62,113,Reel/Video,14.52,Android,Socializing
+USR_1108,30,Male,YouTube,2.55,2.95,1,21,1,1,264,439,Carousel,8.71,Android,Entertainment
+USR_1109,59,Non-binary,TikTok,2.36,2.96,22,241,14,13,17082,3500,Photo/Image,1.57,iOS,Entertainment
+USR_1110,47,Female,Instagram,4.37,5.58,3,46,1,0,1421,1961,Photo/Image,3.31,Android,Entertainment
+USR_1111,24,Female,YouTube,1.65,1.74,2,56,6,0,537,761,Carousel,11.55,iOS,Content Creation
+USR_1112,23,Female,Facebook,2.2,2.45,3,47,2,3,694,815,Carousel,7.49,iOS,Entertainment
+USR_1113,24,Female,Twitter/X,5.45,6.89,7,277,22,15,4029,2148,Reel/Video,7.79,Android,Socializing
+USR_1114,30,Male,Twitter/X,3.47,4.05,24,188,20,14,11650,3500,Photo/Image,1.91,Android,Entertainment
+USR_1115,64,Female,Facebook,4.33,5.41,3,251,22,8,1993,2494,Reel/Video,14.1,iOS,News/Information
+USR_1116,64,Male,Instagram,2.57,2.97,2,6,0,0,119,98,Reel/Video,5.04,Android,Entertainment
+USR_1117,25,Female,YouTube,1.8,2.1,1,89,9,7,1061,802,Photo/Image,9.9,Android,Entertainment
+USR_1118,34,Male,Facebook,4.13,4.53,1,155,12,4,2503,2413,Reel/Video,6.83,Desktop/Web,Professional/Networking
+USR_1119,23,Male,Instagram,5.25,5.92,1,89,3,1,421,334,Reel/Video,22.09,iOS,Socializing
+USR_1120,46,Female,Twitter/X,4.03,4.96,6,1007,115,26,21894,839,Carousel,5.24,Desktop/Web,News/Information
+USR_1121,24,Male,YouTube,3.96,4.67,1,714,22,8,34268,377,Reel/Video,2.17,iOS,Entertainment
+USR_1122,29,Female,YouTube,2.33,2.99,1,63,4,0,624,474,Photo/Image,10.74,iOS,Entertainment
+USR_1123,29,Female,YouTube,10.8,14.0,1,79,6,4,1203,820,Reel/Video,7.4,Android,Content Creation
+USR_1124,34,Female,LinkedIn,2.42,2.93,1,26,1,0,286,416,Reel/Video,9.44,Android,Professional/Networking
+USR_1125,28,Female,Twitter/X,2.5,3.19,2,119,10,2,907,512,Reel/Video,14.44,Android,Entertainment
+USR_1126,21,Female,Instagram,3.2,3.65,2,99,8,4,1316,961,Photo/Image,8.43,iOS,News/Information
+USR_1127,26,Male,LinkedIn,2.09,2.45,1,141,7,4,923,701,Carousel,16.47,iOS,Socializing
+USR_1128,62,Male,Instagram,5.59,7.06,14,226,12,7,2295,3151,Reel/Video,10.68,Android,Content Creation
+USR_1129,16,Male,TikTok,4.09,4.77,21,522,34,7,11209,3500,Reel/Video,5.02,iOS,Socializing
+USR_1130,37,Female,TikTok,5.53,6.78,1,197,17,2,5201,3500,Text/Status,4.15,Android,Entertainment
+USR_1131,29,Male,TikTok,4.02,4.44,15,838,55,39,13675,3500,Reel/Video,6.82,iOS,Professional/Networking
+USR_1132,59,Female,TikTok,3.57,4.39,3,123,12,3,2607,1923,Carousel,5.29,Desktop/Web,News/Information
+USR_1133,37,Female,Facebook,4.01,5.25,2,58,3,1,527,313,Reel/Video,11.76,Android,Socializing
+USR_1134,16,Male,Twitter/X,3.55,4.65,2,124,12,3,1950,1975,Carousel,7.13,Android,Entertainment
+USR_1135,43,Female,YouTube,3.34,4.23,0,44,4,0,1033,540,Reel/Video,4.65,Desktop/Web,Entertainment
+USR_1136,18,Male,Instagram,2.47,3.15,1,22,2,1,225,412,Carousel,11.11,Android,Socializing
+USR_1137,28,Male,LinkedIn,2.28,2.78,2,105,5,7,1088,895,Carousel,10.75,iOS,Entertainment
+USR_1138,35,Female,LinkedIn,2.02,2.48,1,12,0,0,215,222,Photo/Image,5.58,iOS,Socializing
+USR_1139,21,Female,Twitter/X,2.11,2.3,13,220,21,14,3049,2087,Reel/Video,8.36,Android,Entertainment
+USR_1140,23,Female,Instagram,2.36,2.79,2,67,6,2,917,902,Carousel,8.18,iOS,Content Creation
+USR_1141,17,Male,Instagram,4.16,4.93,14,194,21,10,5606,2580,Photo/Image,4.01,Android,Entertainment
+USR_1142,22,Female,Instagram,4.43,5.93,1,22,1,1,175,339,Reel/Video,13.71,iOS,Socializing
+USR_1143,56,Female,Instagram,2.94,3.47,22,799,32,32,18308,3500,Reel/Video,4.71,iOS,Socializing
+USR_1144,27,Female,TikTok,2.89,3.51,0,107,4,1,1531,1229,Carousel,7.32,iOS,Socializing
+USR_1145,24,Male,LinkedIn,1.34,1.62,1,30,1,0,297,476,Reel/Video,10.44,Desktop/Web,Socializing
+USR_1146,36,Female,TikTok,4.46,5.53,3,7,0,0,127,309,Photo/Image,5.51,Android,Entertainment
+USR_1147,18,Female,Instagram,2.41,3.07,1,38,3,1,593,504,Photo/Image,7.08,Desktop/Web,Content Creation
+USR_1148,27,Male,Instagram,9.47,10.58,2,73,4,4,406,617,Carousel,19.95,Desktop/Web,Professional/Networking
+USR_1149,19,Male,Instagram,2.87,3.47,2,81,5,3,829,1091,Text/Status,10.74,iOS,Content Creation
+USR_1150,31,Female,Instagram,1.16,1.51,2,32,1,0,450,394,Text/Status,7.33,iOS,News/Information
+USR_1151,28,Female,Instagram,3.41,4.05,4,7,0,0,90,71,Reel/Video,7.78,Android,Content Creation
+USR_1152,40,Female,Instagram,3.34,3.79,5,44,2,2,436,521,Carousel,11.01,Android,Content Creation
+USR_1153,36,Male,Twitter/X,4.46,5.56,15,230,23,14,6379,3344,Reel/Video,4.19,iOS,Entertainment
+USR_1154,43,Female,Facebook,3.42,4.44,14,547,61,42,15844,3500,Photo/Image,4.1,Desktop/Web,Socializing
+USR_1155,31,Male,TikTok,2.58,2.76,3,17,1,0,300,403,Photo/Image,6.0,iOS,Socializing
+USR_1156,34,Male,TikTok,3.3,4.23,0,370,11,16,7025,3500,Reel/Video,5.65,iOS,Entertainment
+USR_1157,22,Male,Twitter/X,3.13,4.06,1,5,0,0,95,181,Text/Status,5.26,Android,Socializing
+USR_1158,24,Female,Instagram,1.3,1.54,14,2319,276,133,41651,267,Reel/Video,6.55,iOS,Entertainment
+USR_1159,25,Male,Instagram,6.31,8.49,0,43,2,0,535,585,Photo/Image,8.41,iOS,Content Creation
+USR_1160,48,Male,LinkedIn,1.34,1.72,16,477,15,22,14099,3500,Carousel,3.65,iOS,Socializing
+USR_1161,25,Male,Instagram,6.54,8.38,8,580,42,37,8651,3500,Carousel,7.62,iOS,Socializing
+USR_1162,19,Female,YouTube,4.3,5.48,4,130,11,7,3329,1716,Reel/Video,4.45,Android,News/Information
+USR_1163,39,Non-binary,YouTube,4.79,5.25,15,166,11,6,2945,3224,Photo/Image,6.21,Android,Socializing
+USR_1164,17,Female,TikTok,6.3,7.03,3,10,0,0,192,409,Carousel,5.21,Android,Entertainment
+USR_1165,26,Female,TikTok,4.86,5.78,2,332,20,8,4909,3500,Reel/Video,7.33,Android,Entertainment
+USR_1166,41,Female,Twitter/X,3.66,4.13,2,46,5,0,617,897,Photo/Image,8.27,iOS,Professional/Networking
+USR_1167,22,Male,Instagram,3.21,3.77,15,646,69,12,7568,3500,Reel/Video,9.61,iOS,Socializing
+USR_1168,32,Female,Instagram,4.08,5.37,14,1277,93,56,34574,300,Photo/Image,4.12,iOS,Socializing
+USR_1169,61,Female,Twitter/X,2.08,2.7,25,213,8,2,2243,1755,Carousel,9.94,iOS,Entertainment
+USR_1170,23,Female,TikTok,3.22,3.99,12,507,60,27,17568,3500,Photo/Image,3.38,iOS,Socializing
+USR_1171,25,Female,Instagram,8.36,10.93,1,25,1,1,341,388,Photo/Image,7.92,Android,Entertainment
+USR_1172,30,Male,LinkedIn,1.36,1.75,1,89,4,1,602,439,Photo/Image,15.61,Android,Content Creation
+USR_1173,18,Male,TikTok,4.03,4.75,1,43,2,0,785,455,Photo/Image,5.73,Android,Professional/Networking
+USR_1174,19,Female,Twitter/X,2.85,3.16,5,9,1,0,131,186,Reel/Video,7.63,Android,Content Creation
+USR_1175,20,Female,Twitter/X,2.35,2.83,2,19,1,0,273,339,Reel/Video,7.33,iOS,Content Creation
+USR_1176,29,Male,YouTube,4.54,5.77,4,159,6,4,4459,3500,Photo/Image,3.79,Android,Socializing
+USR_1177,30,Female,TikTok,4.9,5.79,1,116,9,6,2350,1425,Photo/Image,5.57,Android,Content Creation
+USR_1178,42,Female,Facebook,1.98,2.48,3,62,1,4,659,916,Photo/Image,10.17,iOS,Socializing
+USR_1179,26,Non-binary,Instagram,3.62,3.9,3,63,6,2,984,754,Reel/Video,7.22,iOS,Content Creation
+USR_1180,18,Male,Twitter/X,1.66,2.12,2,78,8,5,490,410,Reel/Video,18.57,Android,Entertainment
+USR_1181,34,Female,Instagram,4.93,6.38,4,605,67,37,4493,2074,Reel/Video,15.78,Android,Entertainment
+USR_1182,36,Male,TikTok,4.07,5.14,17,107,9,8,4262,3500,Text/Status,2.91,Android,Socializing
+USR_1183,30,Female,TikTok,3.9,5.23,22,772,79,16,9822,3500,Photo/Image,8.83,Android,Socializing
+USR_1184,44,Male,Facebook,4.04,5.24,1,159,7,8,3359,1971,Reel/Video,5.18,Desktop/Web,Entertainment
+USR_1185,39,Female,Facebook,2.65,3.5,4,53,3,0,274,338,Reel/Video,20.44,iOS,Content Creation
+USR_1186,42,Female,Instagram,5.21,6.93,1,193,11,3,5947,3500,Text/Status,3.48,iOS,Entertainment
+USR_1187,64,Female,Instagram,2.25,2.9,2,11,1,0,128,145,Reel/Video,9.38,iOS,Entertainment
+USR_1188,36,Male,Twitter/X,5.1,6.39,2,145,8,8,6562,3365,Carousel,2.45,iOS,Content Creation
+USR_1189,38,Male,TikTok,2.93,3.08,1,60,5,2,444,352,Reel/Video,15.09,Android,Socializing
+USR_1190,16,Female,Instagram,1.61,1.92,8,152,9,9,4788,2102,Text/Status,3.55,Android,Content Creation
+USR_1191,24,Female,YouTube,3.11,3.8,23,171,8,4,1904,1936,Carousel,9.61,Android,Socializing
+USR_1192,22,Male,TikTok,3.08,3.51,1,35,1,0,401,529,Photo/Image,8.98,iOS,News/Information
+USR_1193,20,Female,Facebook,2.58,2.96,1,15,1,0,205,178,Reel/Video,7.8,Android,Socializing
+USR_1194,39,Female,Instagram,3.83,5.13,2,36,2,1,334,498,Reel/Video,11.68,iOS,Entertainment
+USR_1195,29,Non-binary,TikTok,6.15,8.1,1,52,5,0,598,463,Photo/Image,9.53,iOS,Entertainment
+USR_1196,24,Female,TikTok,3.44,4.49,0,169,7,12,2592,1969,Photo/Image,7.25,Android,Entertainment
+USR_1197,21,Male,Twitter/X,1.98,2.32,2,94,3,1,939,591,Reel/Video,10.44,Android,Professional/Networking
+USR_1198,38,Non-binary,TikTok,2.26,2.38,4,66,3,0,1073,715,Reel/Video,6.43,iOS,Entertainment
+USR_1199,38,Female,YouTube,2.92,3.14,3,22,2,0,193,231,Photo/Image,12.44,iOS,Socializing
+USR_1200,16,Female,Instagram,1.48,1.69,3,30,3,1,243,159,Photo/Image,13.99,Android,Entertainment
+USR_1201,20,Female,Twitter/X,1.95,2.06,20,1797,68,83,37918,788,Reel/Video,5.14,iOS,Professional/Networking
+USR_1202,19,Male,TikTok,6.57,6.93,17,273,31,16,2365,2093,Reel/Video,13.53,iOS,Entertainment
+USR_1203,27,Male,Instagram,2.39,3.17,3,129,9,5,6809,3500,Text/Status,2.1,Android,News/Information
+USR_1204,17,Male,YouTube,4.78,6.03,3,23,1,1,523,423,Photo/Image,4.78,iOS,Entertainment
+USR_1205,43,Female,Instagram,1.99,2.27,1,121,12,6,717,464,Carousel,19.39,iOS,Entertainment
+USR_1206,23,Male,Instagram,7.67,8.36,11,1698,182,129,34930,261,Photo/Image,5.75,iOS,Entertainment
+USR_1207,16,Male,LinkedIn,4.46,5.37,2,372,13,8,3996,3500,Reel/Video,9.83,Desktop/Web,Content Creation
+USR_1208,30,Male,TikTok,4.9,5.15,24,140,6,4,4798,2065,Reel/Video,3.13,Desktop/Web,Professional/Networking
+USR_1209,26,Male,Twitter/X,6.62,8.81,22,467,22,26,5542,3350,Reel/Video,9.29,iOS,Entertainment
+USR_1210,25,Male,Instagram,4.05,4.76,0,80,8,1,665,514,Carousel,13.38,iOS,Entertainment
+USR_1211,29,Male,Twitter/X,3.82,4.47,1,35,1,1,1117,1259,Photo/Image,3.31,iOS,Content Creation
+USR_1212,37,Male,Instagram,6.1,7.12,13,958,43,32,29285,620,Reel/Video,3.53,iOS,Entertainment
+USR_1213,37,Female,TikTok,4.07,4.36,24,231,10,4,5044,3500,Text/Status,4.86,Android,Entertainment
+USR_1214,43,Female,Facebook,1.49,1.85,1,41,4,0,1631,1178,Reel/Video,2.76,Android,Entertainment
+USR_1215,20,Male,Twitter/X,3.86,4.9,21,1431,55,58,39433,207,Text/Status,3.92,iOS,Entertainment
+USR_1216,21,Female,TikTok,3.04,3.81,3,83,6,5,1184,1199,Text/Status,7.94,iOS,Entertainment
+USR_1217,22,Male,TikTok,3.14,3.43,3,91,10,3,1078,1152,Reel/Video,9.65,iOS,Entertainment
+USR_1218,17,Non-binary,LinkedIn,2.23,2.73,18,215,22,7,2224,1350,Reel/Video,10.97,iOS,Entertainment
+USR_1219,28,Male,TikTok,4.85,5.92,18,46,4,2,1695,2025,Photo/Image,3.07,iOS,Professional/Networking
+USR_1220,23,Female,Twitter/X,2.89,3.79,3,108,7,1,1195,1201,Photo/Image,9.71,Android,Entertainment
+USR_1221,42,Female,Twitter/X,3.6,4.19,3,55,4,2,632,461,Photo/Image,9.65,Android,Content Creation
+USR_1222,30,Female,Instagram,2.51,2.92,1,19,1,0,373,364,Text/Status,5.36,Android,Entertainment
+USR_1223,36,Male,Instagram,3.39,4.19,4,56,3,2,985,954,Carousel,6.19,iOS,Content Creation
+USR_1224,22,Male,YouTube,5.28,6.55,0,51,4,2,661,815,Reel/Video,8.62,Android,Entertainment
+USR_1225,25,Male,Instagram,7.67,9.13,3,240,17,18,3275,3500,Reel/Video,8.4,iOS,Content Creation
+USR_1226,30,Female,Instagram,8.99,10.63,1,106,10,2,800,1128,Photo/Image,14.75,iOS,Entertainment
+USR_1227,64,Male,Facebook,3.65,4.37,0,19,1,0,283,376,Reel/Video,7.07,Android,Professional/Networking
+USR_1228,28,Male,YouTube,5.26,6.88,2,194,11,13,2710,1795,Carousel,8.04,iOS,Entertainment
+USR_1229,33,Female,Twitter/X,6.6,7.84,1,74,7,5,540,559,Reel/Video,15.93,Android,Entertainment
+USR_1230,38,Male,YouTube,2.67,3.56,1,67,2,3,1440,2006,Reel/Video,5.0,Android,News/Information
+USR_1231,56,Female,YouTube,4.79,5.75,1,49,4,3,390,648,Reel/Video,14.36,Android,Socializing
+USR_1232,35,Female,Instagram,4.88,6.51,8,499,29,10,4521,3500,Carousel,11.9,Desktop/Web,Entertainment
+USR_1233,17,Male,TikTok,7.2,9.36,1,103,7,5,798,491,Reel/Video,14.41,iOS,News/Information
+USR_1234,62,Female,Instagram,2.07,2.4,0,93,9,2,727,858,Carousel,14.31,Desktop/Web,Entertainment
+USR_1235,28,Male,TikTok,2.46,3.22,24,278,30,3,11623,3500,Photo/Image,2.68,Android,Entertainment
+USR_1236,33,Male,Twitter/X,2.73,2.96,21,315,16,14,6184,3500,Carousel,5.58,Android,News/Information
+USR_1237,19,Male,TikTok,4.45,5.91,1,5,0,0,100,110,Photo/Image,5.0,iOS,Entertainment
+USR_1238,62,Female,TikTok,6.22,7.71,2,39,3,0,412,510,Reel/Video,10.19,Android,Professional/Networking
+USR_1239,27,Male,TikTok,4.74,5.05,3,109,9,3,2070,1798,Carousel,5.85,iOS,Entertainment
+USR_1240,44,Male,Instagram,3.23,4.02,3,71,3,2,488,763,Reel/Video,15.57,Android,Content Creation
+USR_1241,23,Male,TikTok,4.53,6.08,4,63,6,4,521,548,Photo/Image,14.01,iOS,Socializing
+USR_1242,56,Female,Instagram,3.96,4.24,27,961,45,66,13815,3500,Reel/Video,7.76,Android,News/Information
+USR_1243,40,Female,Instagram,7.58,9.22,3,23,2,1,295,410,Carousel,8.81,iOS,Socializing
+USR_1244,30,Male,Instagram,3.72,4.74,0,8,0,0,126,203,Text/Status,6.35,iOS,Entertainment
+USR_1245,39,Female,TikTok,3.16,4.09,2,40,4,0,581,596,Photo/Image,7.57,iOS,Socializing
+USR_1246,24,Male,Twitter/X,3.31,3.89,2,11,0,0,387,500,Photo/Image,2.84,iOS,Entertainment
+USR_1247,18,Male,Instagram,3.78,4.2,2,29,2,1,221,287,Carousel,14.48,iOS,Content Creation
+USR_1248,24,Male,TikTok,1.85,1.97,9,329,24,5,7644,3500,Reel/Video,4.68,iOS,Professional/Networking
+USR_1249,25,Male,YouTube,3.58,4.38,2,43,1,0,1373,1674,Text/Status,3.2,Android,Socializing
+USR_1250,22,Male,Instagram,3.3,3.91,8,558,63,8,9179,3500,Reel/Video,6.85,Android,Content Creation
+USR_1251,23,Male,LinkedIn,1.53,2.04,1,69,7,4,1072,891,Text/Status,7.46,Android,Entertainment
+USR_1252,18,Male,TikTok,5.98,6.39,13,1082,73,21,42704,695,Carousel,2.75,iOS,Socializing
+USR_1253,30,Male,TikTok,2.64,3.31,12,156,12,8,3987,3500,Carousel,4.41,iOS,Socializing
+USR_1254,47,Female,YouTube,4.43,4.68,2,81,7,5,1032,980,Photo/Image,9.01,iOS,Socializing
+USR_1255,34,Female,Instagram,3.23,3.56,1,16,1,1,376,469,Photo/Image,4.79,Android,Entertainment
+USR_1256,23,Male,YouTube,3.78,4.48,3,27,2,0,253,197,Photo/Image,11.46,Android,Content Creation
+USR_1257,20,Female,TikTok,4.52,5.36,17,120,8,3,2776,2192,Reel/Video,4.72,iOS,Entertainment
+USR_1258,41,Female,LinkedIn,1.08,1.36,14,115,8,7,3476,3500,Photo/Image,3.74,iOS,Content Creation
+USR_1259,22,Female,Instagram,3.77,4.99,3,49,3,2,1150,850,Photo/Image,4.7,Android,Entertainment
+USR_1260,24,Male,TikTok,10.52,13.06,15,3908,335,304,187579,923,Carousel,2.42,Android,Professional/Networking
+USR_1261,24,Male,YouTube,1.79,2.39,26,86,5,4,3139,3335,Photo/Image,3.03,Android,Entertainment
+USR_1262,31,Male,Instagram,3.37,4.43,2,24,1,1,421,358,Reel/Video,6.18,Android,Socializing
+USR_1263,31,Male,TikTok,6.23,7.63,1,102,10,1,658,564,Reel/Video,17.17,iOS,Entertainment
+USR_1264,19,Male,Twitter/X,3.1,4.03,2,87,5,5,1207,1148,Photo/Image,8.04,iOS,Content Creation
+USR_1265,50,Female,Twitter/X,3.68,4.57,1,114,4,8,1011,881,Reel/Video,12.46,iOS,Entertainment
+USR_1266,21,Male,TikTok,1.29,1.38,1,380,13,8,4064,3500,Reel/Video,9.87,iOS,Content Creation
+USR_1267,49,Female,Twitter/X,3.54,4.5,3,10,0,0,72,75,Carousel,13.89,iOS,Entertainment
+USR_1268,23,Male,Facebook,2.13,2.3,5,4,0,0,73,240,Photo/Image,5.48,Android,Content Creation
+USR_1269,36,Male,LinkedIn,2.24,2.75,8,205,11,3,2912,2721,Photo/Image,7.52,iOS,Entertainment
+USR_1270,43,Female,Instagram,3.41,4.3,25,784,37,60,21309,509,Reel/Video,4.13,iOS,Entertainment
+USR_1271,21,Female,Twitter/X,7.54,8.07,4,8,0,0,124,237,Carousel,6.45,iOS,Socializing
+USR_1272,16,Female,TikTok,4.8,5.37,8,145,8,8,1616,1439,Reel/Video,9.96,iOS,Entertainment
+USR_1273,42,Female,Facebook,2.86,3.79,3,59,2,1,1529,1682,Carousel,4.05,iOS,Entertainment
+USR_1274,32,Female,TikTok,1.9,2.35,21,285,29,5,9781,3500,Reel/Video,3.26,Android,News/Information
+USR_1275,62,Male,Instagram,3.65,4.1,2,28,2,0,194,306,Carousel,15.46,Android,News/Information
+USR_1276,54,Male,Twitter/X,3.92,4.93,1,12,1,0,217,276,Photo/Image,5.99,iOS,Content Creation
+USR_1277,16,Male,TikTok,3.62,4.45,22,88,3,3,2704,3500,Photo/Image,3.48,iOS,Entertainment
+USR_1278,55,Male,Facebook,2.39,2.87,25,159,11,9,5316,3500,Photo/Image,3.37,iOS,Entertainment
+USR_1279,30,Male,Facebook,2.32,3.12,0,43,3,2,326,483,Photo/Image,14.72,Android,Socializing
+USR_1280,19,Male,YouTube,4.59,5.76,1,56,2,2,1378,1412,Reel/Video,4.35,iOS,Entertainment
+USR_1281,19,Female,Instagram,4.86,5.65,3,4,0,0,62,159,Carousel,6.45,iOS,News/Information
+USR_1282,48,Male,YouTube,6.65,8.58,0,33,3,1,250,320,Reel/Video,14.8,Android,Entertainment
+USR_1283,35,Female,Instagram,2.21,2.91,4,9,0,0,187,292,Text/Status,4.81,iOS,News/Information
+USR_1284,24,Non-binary,Instagram,4.38,4.76,2,80,8,5,514,829,Carousel,18.09,iOS,Socializing
+USR_1285,22,Male,Twitter/X,2.56,2.84,2,29,1,1,363,339,Reel/Video,8.54,iOS,Content Creation
+USR_1286,24,Male,Instagram,3.31,3.69,1,117,9,9,2082,2868,Carousel,6.48,iOS,Entertainment
+USR_1287,55,Female,TikTok,4.5,5.66,1,15,1,0,99,198,Reel/Video,16.16,iOS,Professional/Networking
+USR_1288,23,Male,Facebook,3.61,4.44,4,107,6,4,758,671,Reel/Video,15.44,Android,Entertainment
+USR_1289,46,Male,TikTok,4.76,5.88,1,64,4,2,1503,1603,Text/Status,4.66,Android,Content Creation
+USR_1290,27,Female,Instagram,2.15,2.86,3,678,45,37,8999,3500,Photo/Image,8.45,Android,Content Creation
+USR_1291,16,Female,LinkedIn,1.39,1.78,1,51,3,0,388,435,Photo/Image,13.92,iOS,Entertainment
+USR_1292,29,Male,Instagram,6.74,7.34,25,550,60,20,13947,3500,Reel/Video,4.52,iOS,Socializing
+USR_1293,24,Female,Twitter/X,2.45,2.83,22,209,24,2,2057,2388,Reel/Video,11.42,iOS,Socializing
+USR_1294,31,Male,Facebook,3.45,4.07,1,8,0,0,73,136,Text/Status,10.96,iOS,Entertainment
+USR_1295,28,Female,LinkedIn,3.14,3.67,0,116,3,1,2220,2319,Reel/Video,5.41,Android,Socializing
+USR_1296,16,Female,YouTube,4.44,5.55,1,58,4,0,709,1066,Reel/Video,8.74,iOS,Entertainment
+USR_1297,24,Male,TikTok,4.8,6.32,19,439,36,8,21906,802,Photo/Image,2.2,Android,Entertainment
+USR_1298,22,Female,Instagram,5.17,5.9,1,13,1,1,147,244,Photo/Image,10.2,iOS,Content Creation
+USR_1299,30,Male,Twitter/X,1.04,1.26,2,91,8,3,1427,1558,Photo/Image,7.15,iOS,Socializing
+USR_1300,27,Female,LinkedIn,1.57,2.02,27,1653,139,77,38781,571,Reel/Video,4.82,iOS,Entertainment
+USR_1301,36,Female,TikTok,4.64,5.45,1,55,1,1,1247,1213,Reel/Video,4.57,iOS,Professional/Networking
+USR_1302,34,Male,Instagram,6.45,7.1,0,33,1,2,1029,1231,Reel/Video,3.5,iOS,Professional/Networking
+USR_1303,49,Male,Instagram,3.56,4.25,0,40,2,2,723,996,Text/Status,6.09,iOS,Socializing
+USR_1304,32,Male,Instagram,2.36,2.52,1,19,1,1,123,131,Reel/Video,17.07,iOS,Socializing
+USR_1305,32,Male,Twitter/X,1.87,2.49,0,412,20,22,4487,3500,Carousel,10.12,Android,Entertainment
+USR_1306,52,Male,TikTok,5.59,5.99,1,36,3,2,332,592,Carousel,12.35,Android,Content Creation
+USR_1307,17,Female,LinkedIn,1.77,2.09,1,80,2,2,1397,1517,Carousel,6.01,iOS,Content Creation
+USR_1308,60,Female,Twitter/X,2.7,3.26,1,20,1,1,124,260,Carousel,17.74,iOS,Entertainment
+USR_1309,44,Male,Instagram,4.56,6.14,3,31,3,1,177,377,Reel/Video,19.77,Android,Content Creation
+USR_1310,39,Male,YouTube,0.98,1.08,2,334,29,13,5009,3500,Reel/Video,7.51,Desktop/Web,Entertainment
+USR_1311,29,Male,TikTok,9.24,10.02,1,28,2,2,459,682,Photo/Image,6.97,Android,Entertainment
+USR_1312,34,Female,YouTube,2.59,2.73,1,280,19,5,5137,3500,Reel/Video,5.92,iOS,Content Creation
+USR_1313,62,Female,Twitter/X,3.01,3.3,27,185,8,5,3873,3500,Carousel,5.11,Android,Socializing
+USR_1314,36,Male,Twitter/X,1.26,1.4,1,6,0,0,100,257,Photo/Image,6.0,Android,Socializing
+USR_1315,27,Male,Twitter/X,2.24,2.78,3,177,20,10,2369,2039,Carousel,8.74,iOS,Socializing
+USR_1316,41,Male,Instagram,6.05,6.75,22,198,19,13,2817,3500,Reel/Video,8.16,Android,News/Information
+USR_1317,35,Male,Instagram,1.46,1.54,0,49,3,3,1818,1200,Text/Status,3.03,iOS,Socializing
+USR_1318,21,Male,Twitter/X,4.49,5.83,21,550,22,36,7313,3500,Reel/Video,8.31,Desktop/Web,Content Creation
+USR_1319,38,Female,Instagram,3.05,3.54,1,6,0,0,126,264,Photo/Image,4.76,Android,Entertainment
+USR_1320,17,Female,TikTok,4.68,5.41,3,31,2,2,887,1255,Photo/Image,3.95,Android,Entertainment
+USR_1321,38,Female,Instagram,4.64,5.29,2,700,23,33,14446,3500,Carousel,5.23,Android,Entertainment
+USR_1322,27,Female,YouTube,4.4,5.91,7,534,21,15,16613,3500,Photo/Image,3.43,iOS,Socializing
+USR_1323,19,Male,Instagram,2.34,2.58,11,281,28,9,6239,3500,Text/Status,5.1,iOS,Content Creation
+USR_1324,25,Female,YouTube,3.06,4.04,1,76,5,0,3047,1718,Text/Status,2.66,Android,Entertainment
+USR_1325,30,Male,Facebook,1.56,2.0,3,44,1,1,943,1228,Carousel,4.88,Android,Entertainment
+USR_1326,51,Female,Instagram,4.31,4.62,1,157,13,5,941,1213,Reel/Video,18.6,Android,Entertainment
+USR_1327,39,Female,Instagram,7.43,10.0,0,10,0,0,194,278,Carousel,5.15,Android,Entertainment
+USR_1328,22,Female,TikTok,1.65,1.87,1,72,5,2,972,1259,Carousel,8.13,Desktop/Web,News/Information
+USR_1329,23,Female,LinkedIn,1.39,1.5,2,136,13,4,2884,3500,Reel/Video,5.31,Android,Socializing
+USR_1330,39,Male,Instagram,3.18,4.13,1,21,0,1,256,210,Reel/Video,8.59,iOS,Entertainment
+USR_1331,52,Female,TikTok,4.06,5.12,3,280,9,14,4936,3500,Reel/Video,6.14,iOS,Content Creation
+USR_1332,24,Male,Instagram,5.13,6.34,0,41,4,1,634,570,Reel/Video,7.26,Android,Content Creation
+USR_1333,37,Female,Twitter/X,2.52,2.76,2,15,1,0,241,191,Photo/Image,6.64,iOS,Content Creation
+USR_1334,22,Female,TikTok,3.26,3.89,27,1187,50,46,30171,939,Text/Status,4.25,iOS,Entertainment
+USR_1335,63,Female,Twitter/X,4.44,5.7,3,35,3,1,495,350,Photo/Image,7.88,iOS,Socializing
+USR_1336,20,Male,LinkedIn,2.63,3.0,2,61,1,3,1976,2185,Photo/Image,3.29,Android,Entertainment
+USR_1337,57,Male,Instagram,4.4,5.03,11,189,10,12,4722,3500,Text/Status,4.47,Android,Content Creation
+USR_1338,26,Female,Twitter/X,2.84,2.98,19,600,34,29,7325,3500,Reel/Video,9.05,Android,Content Creation
+USR_1339,18,Female,Instagram,5.38,5.93,3,30,1,0,1377,1267,Carousel,2.25,iOS,Socializing
+USR_1340,16,Male,LinkedIn,1.45,1.9,2,70,6,1,1049,912,Photo/Image,7.34,Android,Entertainment
+USR_1341,38,Female,YouTube,2.52,2.98,1,7,0,0,90,252,Photo/Image,7.78,Android,Entertainment
+USR_1342,58,Female,LinkedIn,2.73,3.67,2,26,1,1,188,237,Reel/Video,14.89,iOS,Entertainment
+USR_1343,18,Male,Instagram,1.66,1.94,1,72,3,4,2493,2316,Photo/Image,3.17,iOS,News/Information
+USR_1344,20,Male,Instagram,3.6,4.55,1,106,10,7,602,505,Reel/Video,20.43,iOS,Entertainment
+USR_1345,34,Female,TikTok,3.26,3.7,0,24,2,1,369,413,Carousel,7.32,Android,Entertainment
+USR_1346,16,Male,TikTok,1.99,2.31,2,16,0,1,149,352,Reel/Video,11.41,Android,News/Information
+USR_1347,37,Male,Instagram,2.27,2.51,2,15,1,1,196,248,Carousel,8.67,iOS,Socializing
+USR_1348,16,Female,TikTok,3.58,4.13,1,8,0,0,89,237,Reel/Video,8.99,Desktop/Web,Content Creation
+USR_1349,18,Male,Instagram,5.5,6.68,2,103,6,1,627,924,Reel/Video,17.54,iOS,Entertainment
+USR_1350,17,Male,TikTok,2.8,3.77,4,14,0,0,337,502,Photo/Image,4.15,iOS,Socializing
+USR_1351,18,Female,Twitter/X,4.67,5.83,21,157,16,4,3170,3500,Reel/Video,5.58,iOS,Socializing
+USR_1352,23,Female,TikTok,3.86,4.28,7,299,10,22,4510,3500,Carousel,7.34,iOS,Content Creation
+USR_1353,22,Female,Instagram,6.23,6.63,0,41,1,1,1157,1578,Text/Status,3.72,iOS,Entertainment
+USR_1354,29,Male,TikTok,2.86,3.11,1,214,16,15,12512,3500,Carousel,1.96,iOS,Socializing
+USR_1355,19,Female,Instagram,3.38,4.12,0,12,0,0,130,255,Reel/Video,9.23,iOS,Content Creation
+USR_1356,16,Male,Facebook,3.55,4.54,18,337,34,3,23652,353,Photo/Image,1.58,iOS,Socializing
+USR_1357,23,Male,Instagram,3.19,4.25,23,749,88,39,24662,362,Photo/Image,3.55,Android,Socializing
+USR_1358,60,Female,Twitter/X,4.15,4.38,1,24,2,1,273,393,Carousel,9.89,iOS,Entertainment
+USR_1359,37,Male,Facebook,1.11,1.34,2,122,11,1,934,907,Reel/Video,14.35,iOS,Entertainment
+USR_1360,18,Female,Twitter/X,8.04,9.58,2,42,2,0,400,189,Photo/Image,11.0,Android,Content Creation
+USR_1361,61,Male,YouTube,5.3,6.61,3,77,3,1,912,632,Photo/Image,8.88,iOS,Content Creation
+USR_1362,37,Male,Twitter/X,2.5,3.04,3,305,10,17,5551,3500,Reel/Video,5.98,Android,News/Information
+USR_1363,34,Female,Facebook,2.34,2.94,3,115,13,2,1602,1516,Reel/Video,8.11,Desktop/Web,Content Creation
+USR_1364,51,Female,YouTube,2.44,3.04,2,68,3,1,1405,1108,Photo/Image,5.12,iOS,Socializing
+USR_1365,19,Female,YouTube,4.82,5.23,0,70,5,2,414,531,Carousel,18.6,Desktop/Web,Professional/Networking
+USR_1366,19,Female,YouTube,5.64,7.28,2,5,0,0,133,265,Text/Status,3.76,Android,Entertainment
+USR_1367,31,Female,TikTok,3.49,3.79,0,41,3,1,546,595,Photo/Image,8.24,Desktop/Web,Socializing
+USR_1368,37,Female,YouTube,5.93,7.47,3,258,12,14,3652,2862,Reel/Video,7.78,Android,Entertainment
+USR_1369,31,Non-binary,TikTok,2.5,2.94,1,21,2,1,128,181,Reel/Video,18.75,iOS,Entertainment
+USR_1370,27,Female,Instagram,2.12,2.55,12,68,4,3,2122,1416,Text/Status,3.53,Android,Content Creation
+USR_1371,26,Female,Instagram,7.81,10.32,3,67,4,1,843,1138,Text/Status,8.54,iOS,Socializing
+USR_1372,37,Male,Instagram,4.51,5.94,1,10,0,0,217,265,Text/Status,4.61,iOS,Socializing
+USR_1373,22,Female,Instagram,6.48,8.39,2,19,1,1,269,523,Carousel,7.81,iOS,Socializing
+USR_1374,39,Non-binary,Instagram,2.35,2.83,5,48,3,2,417,368,Reel/Video,12.71,iOS,Socializing
+USR_1375,50,Male,YouTube,2.38,3.02,3,21,1,0,148,278,Carousel,14.86,iOS,Entertainment
+USR_1376,33,Male,Instagram,2.94,3.54,16,166,13,8,2617,2524,Photo/Image,7.15,Android,Content Creation
+USR_1377,22,Female,Twitter/X,1.87,2.45,1,100,10,3,1830,1935,Reel/Video,6.17,Desktop/Web,Socializing
+USR_1378,30,Female,Instagram,4.75,5.56,2,11,0,0,156,209,Carousel,7.05,iOS,Content Creation
+USR_1379,38,Female,Instagram,2.46,3.3,3,20,1,0,121,166,Reel/Video,17.36,Desktop/Web,Entertainment
+USR_1380,24,Male,Twitter/X,1.6,2.13,1,25,1,1,325,297,Reel/Video,8.31,Desktop/Web,Entertainment
+USR_1381,17,Female,YouTube,3.84,4.89,4,131,11,9,1903,1693,Photo/Image,7.93,iOS,Socializing
+USR_1382,19,Female,Instagram,1.93,2.19,0,30,2,1,554,652,Photo/Image,5.96,iOS,Professional/Networking
+USR_1383,24,Non-binary,LinkedIn,0.87,0.95,0,34,3,0,397,746,Carousel,9.32,Android,Socializing
+USR_1384,39,Female,LinkedIn,2.07,2.7,4,65,7,2,757,980,Reel/Video,9.78,Android,Content Creation
+USR_1385,38,Female,TikTok,1.71,1.88,0,14,0,0,107,141,Reel/Video,13.08,Android,News/Information
+USR_1386,36,Female,TikTok,5.32,6.95,5,63,5,0,1379,1874,Reel/Video,4.93,Android,News/Information
+USR_1387,32,Non-binary,Facebook,1.6,1.92,4,79,6,4,1187,858,Reel/Video,7.5,iOS,Content Creation
+USR_1388,29,Female,YouTube,1.32,1.55,0,72,3,2,425,664,Reel/Video,18.12,iOS,Content Creation
+USR_1389,23,Male,TikTok,3.29,4.35,2,120,10,5,2769,3500,Photo/Image,4.88,Android,Entertainment
+USR_1390,59,Male,Twitter/X,2.89,3.56,1,14,1,1,187,295,Photo/Image,8.56,iOS,Professional/Networking
+USR_1391,57,Female,Instagram,4.31,5.27,1,118,12,9,3276,2059,Carousel,4.24,Android,Socializing
+USR_1392,28,Male,TikTok,4.06,4.94,0,39,4,2,875,919,Text/Status,5.14,Android,News/Information
+USR_1393,59,Female,Instagram,2.14,2.49,1,31,3,2,465,482,Photo/Image,7.74,Android,Entertainment
+USR_1394,38,Female,Twitter/X,3.73,4.8,1,113,5,7,696,897,Reel/Video,17.96,Desktop/Web,Socializing
+USR_1395,17,Male,YouTube,5.55,6.25,27,432,27,30,6105,3500,Reel/Video,8.01,iOS,Socializing
+USR_1396,20,Male,YouTube,2.1,2.8,16,1273,50,71,45441,241,Carousel,3.07,Android,Socializing
+USR_1397,25,Male,Instagram,3.18,4.19,4,24,1,0,197,322,Photo/Image,12.69,Android,Entertainment
+USR_1398,32,Male,Instagram,3.05,3.51,1,43,4,2,278,316,Carousel,17.63,Desktop/Web,Socializing
+USR_1399,17,Female,TikTok,4.15,5.27,1,208,19,11,2887,1951,Carousel,8.24,Android,Content Creation
+USR_1400,26,Female,Twitter/X,2.47,3.02,0,34,1,1,338,388,Text/Status,10.65,iOS,Socializing
+USR_1401,43,Female,TikTok,3.64,4.19,4,37,3,2,2396,2940,Text/Status,1.75,Desktop/Web,Entertainment
+USR_1402,32,Female,Instagram,4.61,6.21,0,216,24,14,7231,3500,Photo/Image,3.51,Android,Content Creation
+USR_1403,64,Female,LinkedIn,1.18,1.25,1,58,4,1,428,452,Reel/Video,14.72,iOS,Entertainment
+USR_1404,19,Female,Instagram,4.81,5.42,22,169,10,12,14507,3500,Text/Status,1.32,Android,Entertainment
+USR_1405,19,Female,Facebook,5.02,6.05,1,18,1,0,182,132,Photo/Image,10.44,Android,Content Creation
+USR_1406,16,Female,Instagram,7.21,8.7,2,201,10,2,1963,2290,Reel/Video,10.85,Android,Professional/Networking
+USR_1407,19,Male,YouTube,1.37,1.68,20,374,24,20,10677,3500,Photo/Image,3.91,iOS,Socializing
+USR_1408,52,Male,Instagram,3.18,4.06,3,58,3,2,1339,1722,Photo/Image,4.71,Android,Socializing
+USR_1409,39,Female,LinkedIn,0.81,1.0,27,373,41,22,3432,1425,Carousel,12.7,Android,Entertainment
+USR_1410,53,Male,TikTok,1.26,1.55,2,11,1,0,115,165,Photo/Image,10.43,Android,Socializing
+USR_1411,20,Male,Instagram,3.69,3.93,1,115,10,3,1395,829,Reel/Video,9.18,iOS,Entertainment
+USR_1412,24,Female,TikTok,3.14,3.65,1,7,0,0,87,245,Text/Status,8.05,iOS,News/Information
+USR_1413,21,Male,Instagram,3.95,4.42,0,51,3,2,476,346,Carousel,11.76,Android,Content Creation
+USR_1414,20,Male,Instagram,4.3,4.86,3,52,4,2,2534,2493,Photo/Image,2.29,Android,Content Creation
+USR_1415,24,Male,Facebook,5.27,6.41,0,74,7,4,920,1332,Reel/Video,9.24,iOS,Socializing
+USR_1416,44,Female,TikTok,3.85,4.27,3,324,33,17,10224,3500,Reel/Video,3.66,iOS,Content Creation
+USR_1417,23,Male,Twitter/X,10.08,11.47,0,126,6,4,2843,2413,Photo/Image,4.78,iOS,Socializing
+USR_1418,34,Female,YouTube,4.14,4.64,1,27,1,2,316,505,Reel/Video,9.49,Android,Entertainment
+USR_1419,29,Male,YouTube,8.26,11.02,1,56,4,1,741,611,Reel/Video,8.23,iOS,Entertainment
+USR_1420,19,Male,Instagram,1.21,1.61,2,60,2,1,672,605,Carousel,9.38,iOS,Socializing
+USR_1421,39,Male,Instagram,6.34,7.82,0,6,0,0,122,219,Photo/Image,4.92,iOS,Professional/Networking
+USR_1422,20,Male,Twitter/X,2.49,3.31,1,20,1,1,228,399,Photo/Image,9.65,Android,Entertainment
+USR_1423,29,Male,Facebook,1.25,1.61,1,14,0,0,353,309,Reel/Video,3.97,iOS,Entertainment
+USR_1424,32,Female,Instagram,4.17,5.12,1,5,0,0,88,247,Photo/Image,5.68,iOS,Socializing
+USR_1425,38,Female,Instagram,3.01,3.17,0,46,5,3,760,942,Carousel,7.11,Android,Content Creation
+USR_1426,18,Male,TikTok,4.88,6.25,3,59,6,2,519,599,Reel/Video,12.91,iOS,Entertainment
+USR_1427,64,Female,Facebook,4.74,5.98,2,11,0,0,113,226,Reel/Video,9.73,iOS,Entertainment
+USR_1428,20,Female,Instagram,1.77,2.19,0,57,6,1,1221,1161,Photo/Image,5.24,Desktop/Web,Socializing
+USR_1429,34,Female,TikTok,5.93,7.58,3,101,6,2,1862,1104,Text/Status,5.85,iOS,Socializing
+USR_1430,40,Female,LinkedIn,1.96,2.36,5,118,7,3,964,1350,Photo/Image,13.28,Android,Entertainment
+USR_1431,34,Male,Instagram,6.35,8.01,2,67,2,3,472,455,Reel/Video,15.25,iOS,Entertainment
+USR_1432,30,Male,Instagram,3.15,4.19,2,107,7,2,1572,1885,Reel/Video,7.38,Android,Socializing
+USR_1433,58,Male,YouTube,2.92,3.4,3,150,11,5,1773,926,Carousel,9.36,iOS,Socializing
+USR_1434,18,Male,LinkedIn,1.98,2.5,4,73,5,3,1072,1121,Reel/Video,7.56,Android,News/Information
+USR_1435,22,Female,Instagram,3.62,4.32,19,179,9,3,3653,2334,Photo/Image,5.23,iOS,Content Creation
+USR_1436,38,Female,TikTok,2.79,3.49,19,345,17,4,9887,3500,Photo/Image,3.7,iOS,Entertainment
+USR_1437,23,Male,TikTok,3.0,3.84,21,1725,148,58,40637,877,Reel/Video,4.75,Android,Socializing
+USR_1438,32,Female,TikTok,2.16,2.3,1,19,0,1,338,298,Carousel,5.92,Desktop/Web,Socializing
+USR_1439,30,Male,YouTube,2.96,3.68,24,1494,76,61,89230,342,Carousel,1.83,iOS,Entertainment
+USR_1440,36,Male,TikTok,5.09,5.69,7,123,9,8,4252,3500,Photo/Image,3.29,Android,Professional/Networking
+USR_1441,17,Female,TikTok,3.53,4.42,1,87,9,2,746,696,Reel/Video,13.14,iOS,Content Creation
+USR_1442,40,Male,TikTok,5.91,7.04,1,53,3,4,309,526,Reel/Video,19.42,Android,Entertainment
+USR_1443,24,Male,YouTube,3.32,4.26,2,48,4,1,959,1254,Photo/Image,5.53,iOS,Entertainment
+USR_1444,63,Male,TikTok,1.97,2.14,3,5,0,0,108,181,Photo/Image,4.63,Android,Entertainment
+USR_1445,20,Female,LinkedIn,2.55,3.16,14,418,24,10,4242,3500,Reel/Video,10.66,iOS,Entertainment
+USR_1446,35,Female,Instagram,2.55,2.89,2,30,1,0,194,432,Reel/Video,15.98,iOS,Socializing
+USR_1447,19,Male,Twitter/X,2.43,3.17,1,167,14,4,853,780,Reel/Video,21.69,iOS,Socializing
+USR_1448,26,Female,Twitter/X,4.72,6.27,2,202,15,13,2726,2720,Text/Status,8.44,iOS,News/Information
+USR_1449,29,Female,Instagram,2.05,2.77,0,173,18,9,1693,1472,Carousel,11.81,Android,Entertainment
+USR_1450,21,Male,TikTok,4.04,5.21,1,5,0,0,74,266,Text/Status,6.76,Desktop/Web,Socializing
+USR_1451,16,Female,TikTok,3.69,4.71,1,711,58,29,11651,3500,Reel/Video,6.85,Android,Professional/Networking
+USR_1452,30,Male,Instagram,4.74,5.28,0,52,1,2,1055,738,Text/Status,5.21,iOS,Socializing
+USR_1453,31,Male,TikTok,5.52,6.35,18,87,8,2,3080,2153,Reel/Video,3.15,iOS,Entertainment
+USR_1454,58,Male,Instagram,3.89,4.63,12,161,7,10,5417,3500,Photo/Image,3.29,Android,Entertainment
+USR_1455,26,Female,Instagram,2.94,3.77,20,387,25,11,5156,3500,Carousel,8.2,Desktop/Web,Entertainment
+USR_1456,24,Male,Twitter/X,3.35,4.44,4,34,2,2,311,286,Reel/Video,12.22,iOS,News/Information
+USR_1457,48,Female,Instagram,6.3,6.97,1,81,8,6,927,775,Photo/Image,10.25,Android,Professional/Networking
+USR_1458,60,Female,Twitter/X,2.67,3.54,20,128,10,5,2534,2203,Reel/Video,5.64,Desktop/Web,News/Information
+USR_1459,41,Male,TikTok,3.33,4.19,2,70,2,5,427,522,Reel/Video,18.03,Android,Content Creation
+USR_1460,32,Female,LinkedIn,2.33,2.87,3,25,2,0,304,280,Photo/Image,8.88,iOS,Entertainment
+USR_1461,51,Female,YouTube,3.67,4.07,10,137,10,2,2477,1483,Photo/Image,6.02,iOS,Professional/Networking
+USR_1462,36,Male,Instagram,1.89,2.02,0,83,3,4,865,969,Carousel,10.4,iOS,News/Information
+USR_1463,48,Female,YouTube,4.01,4.89,6,524,48,37,9816,3500,Photo/Image,6.2,Android,Entertainment
+USR_1464,18,Female,Instagram,1.88,2.34,2,63,3,3,1417,1196,Photo/Image,4.87,iOS,Entertainment
+USR_1465,37,Female,TikTok,4.44,4.94,2,185,12,7,2146,2882,Reel/Video,9.51,iOS,Socializing
+USR_1466,21,Male,LinkedIn,1.36,1.66,21,433,45,13,7048,3491,Reel/Video,6.97,Android,Entertainment
+USR_1467,31,Male,Instagram,3.51,4.59,19,219,18,4,4578,3500,Text/Status,5.26,iOS,Entertainment
+USR_1468,56,Female,TikTok,4.48,5.83,1,152,6,7,2204,2773,Reel/Video,7.49,iOS,News/Information
+USR_1469,22,Female,Twitter/X,8.16,10.84,8,89,3,5,2118,1612,Photo/Image,4.58,Android,Professional/Networking
+USR_1470,48,Female,LinkedIn,2.73,3.17,20,228,19,9,2970,3500,Reel/Video,8.62,Android,Entertainment
+USR_1471,25,Female,YouTube,6.66,7.63,2,30,1,1,222,347,Carousel,14.41,Android,Socializing
+USR_1472,17,Male,Instagram,8.02,10.22,2,191,16,14,3067,3500,Carousel,7.21,iOS,Professional/Networking
+USR_1473,18,Female,YouTube,4.49,5.3,1,68,3,5,2539,2388,Reel/Video,2.99,Android,Content Creation
+USR_1474,18,Female,Instagram,3.93,4.23,2,126,4,9,1365,790,Reel/Video,10.18,Android,Socializing
+USR_1475,28,Male,Twitter/X,1.67,1.9,2,220,13,3,3033,3295,Photo/Image,7.78,iOS,Content Creation
+USR_1476,25,Male,Facebook,2.85,3.35,23,214,8,11,2448,3157,Reel/Video,9.52,Android,Professional/Networking
+USR_1477,23,Male,Twitter/X,1.95,2.22,16,555,43,10,14132,3500,Reel/Video,4.3,iOS,Professional/Networking
+USR_1478,25,Female,LinkedIn,1.63,1.87,0,56,2,3,608,311,Carousel,10.03,iOS,Entertainment
+USR_1479,16,Female,Instagram,8.02,9.13,1,70,2,1,2226,1600,Reel/Video,3.28,iOS,Entertainment
+USR_1480,33,Female,Twitter/X,2.85,3.03,1,33,2,0,616,738,Carousel,5.68,iOS,Professional/Networking
+USR_1481,22,Female,Twitter/X,1.82,2.26,2,29,1,0,438,682,Photo/Image,6.85,iOS,Entertainment
+USR_1482,28,Male,Instagram,6.41,7.88,1,159,15,3,1468,1257,Reel/Video,12.06,Android,Content Creation
+USR_1483,20,Male,LinkedIn,3.0,3.74,0,103,5,5,2317,2838,Photo/Image,4.88,iOS,Entertainment
+USR_1484,24,Male,Instagram,5.44,6.03,2,28,0,2,310,318,Photo/Image,9.68,Desktop/Web,Socializing
+USR_1485,38,Male,YouTube,1.46,1.66,3,87,3,2,660,775,Reel/Video,13.94,Android,Socializing
+USR_1486,22,Female,Twitter/X,6.5,8.03,1,20,1,1,201,328,Photo/Image,10.95,iOS,Entertainment
+USR_1487,51,Male,YouTube,2.8,3.44,22,97,8,2,1716,1369,Reel/Video,6.24,iOS,Professional/Networking
+USR_1488,35,Female,Instagram,4.9,5.89,1,66,4,3,930,466,Reel/Video,7.85,Android,Entertainment
+USR_1489,34,Male,YouTube,11.22,12.96,4,85,2,4,1610,1050,Reel/Video,5.65,Android,Professional/Networking
+USR_1490,34,Female,TikTok,9.91,13.12,2,57,2,3,1009,935,Reel/Video,6.14,iOS,Professional/Networking
+USR_1491,20,Female,LinkedIn,1.26,1.45,2,12,0,0,93,214,Reel/Video,12.9,iOS,Entertainment
+USR_1492,27,Female,TikTok,1.96,2.33,4,23,2,0,456,549,Photo/Image,5.48,Android,Content Creation
+USR_1493,28,Non-binary,TikTok,7.15,8.96,21,97,8,4,1823,1207,Photo/Image,5.98,iOS,Entertainment
+USR_1494,18,Female,Twitter/X,2.88,3.49,2,209,11,12,4575,2404,Photo/Image,5.07,Android,Content Creation
+USR_1495,49,Female,TikTok,3.0,3.46,1,19,1,0,195,328,Carousel,10.26,Android,Socializing
+USR_1496,31,Female,YouTube,4.77,5.63,3,215,9,6,3906,3500,Carousel,5.89,iOS,Entertainment
+USR_1497,38,Male,YouTube,3.35,4.32,1,152,9,2,2550,1205,Photo/Image,6.39,iOS,Socializing
+USR_1498,22,Male,LinkedIn,2.68,3.04,1,18,1,0,238,261,Photo/Image,7.98,iOS,Content Creation
+USR_1499,60,Male,YouTube,3.72,4.06,3,12,0,0,186,154,Reel/Video,6.45,Android,Professional/Networking
+USR_1500,17,Female,TikTok,5.2,5.95,1,32,2,1,1136,1387,Carousel,3.08,iOS,Entertainment
+USR_1501,21,Male,Instagram,2.31,3.01,0,26,1,1,253,510,Reel/Video,11.07,iOS,Socializing
+USR_1502,32,Female,Instagram,6.56,7.06,3,104,5,1,817,436,Reel/Video,13.46,Android,Entertainment
+USR_1503,38,Male,Instagram,4.73,6.37,1,38,1,2,388,305,Carousel,10.57,iOS,Content Creation
+USR_1504,51,Male,Instagram,4.62,5.6,27,203,23,4,1882,2611,Reel/Video,12.22,iOS,Entertainment
+USR_1505,18,Female,YouTube,2.18,2.93,0,3,0,0,79,170,Reel/Video,3.8,Android,Content Creation
+USR_1506,33,Female,Twitter/X,5.81,7.74,6,352,20,23,10617,3500,Photo/Image,3.72,iOS,Entertainment
+USR_1507,55,Female,TikTok,3.73,4.42,3,16,1,0,353,251,Photo/Image,4.82,Desktop/Web,Socializing
+USR_1508,25,Female,Twitter/X,3.75,4.16,2,20,1,1,356,450,Carousel,6.18,Android,Professional/Networking
+USR_1509,36,Female,Facebook,2.6,2.86,1,124,7,5,1812,1154,Carousel,7.51,iOS,Content Creation
+USR_1510,22,Male,Twitter/X,3.04,3.41,0,285,17,17,3488,3500,Reel/Video,9.15,iOS,Content Creation
+USR_1511,21,Male,YouTube,4.12,5.2,14,291,14,7,3644,3500,Reel/Video,8.56,iOS,Socializing
+USR_1512,52,Female,TikTok,1.06,1.2,0,20,1,1,462,624,Photo/Image,4.76,Android,Professional/Networking
+USR_1513,36,Female,TikTok,4.88,5.62,0,40,1,1,1389,1640,Reel/Video,3.02,iOS,Socializing
+USR_1514,20,Female,Instagram,8.37,9.92,1,11,0,0,149,290,Photo/Image,7.38,Desktop/Web,Professional/Networking
+USR_1515,63,Male,TikTok,4.79,6.34,0,96,10,1,959,1423,Reel/Video,11.16,Android,Socializing
+USR_1516,38,Female,LinkedIn,1.27,1.41,10,355,20,26,6646,3500,Photo/Image,6.03,iOS,Socializing
+USR_1517,46,Male,Twitter/X,3.62,3.81,7,319,17,14,7826,3500,Photo/Image,4.47,Android,Entertainment
+USR_1518,49,Male,Instagram,5.57,5.95,14,150,15,7,1875,1120,Photo/Image,9.17,iOS,Socializing
+USR_1519,17,Male,TikTok,4.73,6.25,9,131,12,1,3188,1987,Photo/Image,4.52,Android,Entertainment
+USR_1520,31,Male,Twitter/X,2.62,3.26,4,22,1,0,244,265,Photo/Image,9.43,Android,Professional/Networking
+USR_1521,34,Female,Instagram,3.1,3.51,1,97,4,5,814,627,Reel/Video,13.02,iOS,Content Creation
+USR_1522,23,Male,TikTok,3.36,3.71,4,93,4,2,1353,1439,Reel/Video,7.32,iOS,News/Information
+USR_1523,42,Female,LinkedIn,2.67,3.04,1,330,21,11,5456,2722,Reel/Video,6.63,Android,Entertainment
+USR_1524,44,Female,TikTok,1.99,2.16,16,81,5,1,4128,3500,Photo/Image,2.11,Android,Entertainment
+USR_1525,24,Male,Instagram,2.92,3.89,1,42,4,2,381,448,Reel/Video,12.6,Desktop/Web,Professional/Networking
+USR_1526,20,Male,TikTok,7.7,9.9,23,308,29,18,13352,3500,Photo/Image,2.66,iOS,Socializing
+USR_1527,38,Male,LinkedIn,4.07,4.84,3,62,2,0,1057,589,Reel/Video,6.05,iOS,Socializing
+USR_1528,29,Female,YouTube,1.85,2.42,2,173,13,11,3973,3500,Photo/Image,4.96,iOS,Professional/Networking
+USR_1529,38,Female,Instagram,2.08,2.34,18,374,23,25,8567,3500,Carousel,4.93,Android,Socializing
+USR_1530,18,Male,TikTok,3.32,4.2,22,84,3,5,2764,1293,Reel/Video,3.33,iOS,Entertainment
+USR_1531,23,Female,TikTok,5.61,7.33,1,15,1,1,152,336,Reel/Video,11.18,iOS,Professional/Networking
+USR_1532,29,Male,YouTube,1.58,1.83,1,21,1,0,125,87,Reel/Video,17.6,Android,Entertainment
+USR_1533,52,Male,Twitter/X,2.64,3.37,4,116,6,4,1730,1609,Photo/Image,7.28,Android,Professional/Networking
+USR_1534,57,Male,Instagram,2.79,3.18,23,1059,85,70,27009,932,Photo/Image,4.49,iOS,Entertainment
+USR_1535,51,Female,LinkedIn,3.55,4.05,1,481,57,37,8908,3500,Reel/Video,6.45,iOS,Content Creation
+USR_1536,18,Female,Instagram,1.62,1.75,3,167,9,12,2215,1878,Photo/Image,8.49,Android,Entertainment
+USR_1537,62,Female,TikTok,3.91,4.62,9,1363,153,71,34443,254,Reel/Video,4.61,iOS,Content Creation
+USR_1538,16,Male,Instagram,2.89,3.67,4,42,1,2,345,591,Photo/Image,13.04,iOS,Entertainment
+USR_1539,60,Female,TikTok,7.28,9.7,25,66,2,2,2222,2895,Photo/Image,3.15,iOS,Professional/Networking
+USR_1540,36,Male,TikTok,4.91,6.04,2,238,13,11,2236,1840,Carousel,11.72,Android,Socializing
+USR_1541,24,Female,TikTok,2.89,3.78,20,780,56,45,13927,3500,Reel/Video,6.33,Android,Entertainment
+USR_1542,30,Non-binary,Instagram,5.07,6.57,3,103,11,7,823,568,Carousel,14.7,iOS,Content Creation
+USR_1543,36,Female,YouTube,3.03,3.34,0,87,5,6,1194,1082,Carousel,8.21,iOS,Socializing
+USR_1544,34,Female,Instagram,5.42,6.48,1,71,2,0,1095,1618,Reel/Video,6.67,Android,Entertainment
+USR_1545,25,Female,Twitter/X,2.43,2.64,1,276,18,13,4063,2155,Reel/Video,7.56,Desktop/Web,Entertainment
+USR_1546,55,Male,Facebook,4.83,6.06,1,234,20,9,4126,2218,Photo/Image,6.37,Android,Socializing
+USR_1547,25,Male,TikTok,4.57,6.1,2,62,4,3,1474,813,Carousel,4.68,Desktop/Web,Entertainment
+USR_1548,33,Male,TikTok,12.0,13.09,4,115,10,1,2223,1781,Carousel,5.67,Android,Entertainment
+USR_1549,23,Female,TikTok,3.67,4.66,1,67,7,2,1416,1229,Photo/Image,5.37,Android,Entertainment
+USR_1550,39,Female,Instagram,4.1,5.08,19,206,6,6,4464,3500,Carousel,4.88,iOS,Socializing
+USR_1551,19,Male,TikTok,3.03,3.71,22,334,19,21,11650,3500,Reel/Video,3.21,iOS,Socializing
+USR_1552,27,Female,Twitter/X,2.71,3.16,1,14,1,0,144,132,Reel/Video,10.42,iOS,Entertainment
+USR_1553,23,Female,YouTube,1.07,1.24,1,84,4,3,2958,1383,Text/Status,3.08,Android,News/Information
+USR_1554,25,Non-binary,Instagram,4.26,4.53,1,25,1,1,174,359,Carousel,15.52,Desktop/Web,Professional/Networking
+USR_1555,63,Non-binary,Twitter/X,4.95,5.52,4,93,6,1,1042,704,Photo/Image,9.6,Android,Entertainment
+USR_1556,39,Male,TikTok,4.49,4.73,2,19,1,0,253,377,Carousel,7.91,iOS,Entertainment
+USR_1557,31,Male,Twitter/X,1.5,1.84,3,39,3,0,1493,1908,Text/Status,2.81,iOS,News/Information
+USR_1558,50,Female,YouTube,2.51,2.72,3,89,3,4,684,880,Carousel,14.04,iOS,Socializing
+USR_1559,16,Female,YouTube,1.21,1.59,1,12,0,0,121,279,Carousel,9.92,iOS,Entertainment
+USR_1560,36,Male,Instagram,5.37,6.48,16,542,22,22,8107,3500,Carousel,7.23,Android,Socializing
+USR_1561,56,Male,Instagram,2.2,2.77,3,37,2,2,346,210,Reel/Video,11.85,Desktop/Web,Content Creation
+USR_1562,49,Female,Facebook,2.97,3.48,8,839,63,44,21685,255,Carousel,4.36,iOS,Entertainment
+USR_1563,39,Female,Instagram,3.22,3.92,13,638,43,26,8533,3500,Reel/Video,8.29,iOS,Content Creation
+USR_1564,33,Female,Facebook,5.87,7.82,3,90,8,3,1207,1166,Carousel,8.37,Android,Content Creation
+USR_1565,25,Male,TikTok,3.9,4.19,4,22,2,1,224,314,Photo/Image,11.16,iOS,Socializing
+USR_1566,42,Male,Instagram,4.97,5.6,2,27,2,1,341,337,Photo/Image,8.8,Android,Professional/Networking
+USR_1567,18,Male,Instagram,4.42,5.68,19,244,9,3,3961,3500,Photo/Image,6.46,iOS,Entertainment
+USR_1568,30,Female,Instagram,6.37,6.88,2,235,7,14,2256,1440,Reel/Video,11.35,iOS,Socializing
+USR_1569,56,Non-binary,LinkedIn,1.75,1.88,27,2338,144,157,41156,528,Reel/Video,6.41,iOS,Socializing
+USR_1570,43,Male,TikTok,8.71,10.09,1,10,0,0,265,345,Text/Status,3.77,iOS,Socializing
+USR_1571,56,Female,TikTok,1.54,1.66,0,134,6,7,3053,3500,Text/Status,4.81,Android,Entertainment
+USR_1572,16,Female,TikTok,5.52,6.76,1,9,0,0,81,277,Reel/Video,11.11,iOS,Entertainment
+USR_1573,22,Female,Instagram,2.34,2.62,2,7,0,0,174,263,Text/Status,4.02,iOS,Entertainment
+USR_1574,22,Female,TikTok,3.01,3.97,1,14,0,0,223,332,Carousel,6.28,iOS,Entertainment
+USR_1575,17,Male,Instagram,4.46,5.73,2,9,0,0,150,150,Photo/Image,6.0,iOS,Entertainment
+USR_1576,34,Female,Twitter/X,3.48,4.38,1,18,0,0,122,175,Reel/Video,14.75,iOS,Content Creation
+USR_1577,38,Male,TikTok,4.93,6.09,2,73,8,2,1235,691,Text/Status,6.72,Android,Entertainment
+USR_1578,31,Female,TikTok,2.01,2.63,1,22,2,1,542,572,Photo/Image,4.61,Android,Content Creation
+USR_1579,58,Female,TikTok,7.21,8.05,2,59,4,1,1181,1743,Carousel,5.42,Desktop/Web,Entertainment
+USR_1580,37,Female,TikTok,2.5,3.28,2,87,2,2,1798,836,Carousel,5.06,iOS,Entertainment
+USR_1581,17,Female,Facebook,2.13,2.74,1,48,1,1,1014,1097,Carousel,4.93,iOS,Entertainment
+USR_1582,55,Female,TikTok,5.0,6.37,1,139,4,6,1720,2488,Photo/Image,8.66,iOS,Entertainment
+USR_1583,23,Male,Instagram,3.04,3.7,2,63,5,4,653,848,Reel/Video,11.03,iOS,Socializing
+USR_1584,33,Male,YouTube,4.14,4.65,1,25,2,1,176,218,Reel/Video,15.91,Android,Entertainment
+USR_1585,19,Male,Instagram,1.31,1.54,8,1418,89,15,33290,680,Reel/Video,4.57,Android,News/Information
+USR_1586,36,Female,Instagram,3.93,5.06,25,254,21,18,4179,3500,Reel/Video,7.01,Android,News/Information
+USR_1587,22,Female,Facebook,3.31,3.51,2,7,0,0,229,255,Photo/Image,3.06,iOS,Socializing
+USR_1588,19,Female,Twitter/X,2.15,2.76,1,37,3,1,568,718,Photo/Image,7.22,iOS,Content Creation
+USR_1589,21,Male,Facebook,1.18,1.32,7,255,25,17,2854,2108,Carousel,10.41,Android,Entertainment
+USR_1590,25,Female,TikTok,3.41,3.73,1,30,0,0,420,752,Reel/Video,7.14,iOS,Socializing
+USR_1591,22,Female,TikTok,3.69,4.0,22,694,66,47,9733,3500,Photo/Image,8.29,iOS,Content Creation
+USR_1592,24,Male,Instagram,2.93,3.1,3,145,10,4,1133,1233,Reel/Video,14.03,Desktop/Web,Entertainment
+USR_1593,19,Female,Instagram,1.51,1.82,2,16,1,0,239,314,Reel/Video,7.11,Android,Entertainment
+USR_1594,31,Female,Twitter/X,5.54,6.18,18,355,33,19,3259,3027,Reel/Video,12.49,Android,Entertainment
+USR_1595,16,Female,TikTok,2.82,3.8,19,582,32,37,27922,305,Carousel,2.33,iOS,Socializing
+USR_1596,22,Male,Twitter/X,2.45,2.99,1,78,6,1,1382,686,Reel/Video,6.15,iOS,Socializing
+USR_1597,21,Male,Twitter/X,0.91,0.99,1,335,22,21,12200,3500,Carousel,3.1,iOS,Socializing
+USR_1598,22,Male,Instagram,7.08,8.9,0,323,33,15,3520,3500,Reel/Video,10.54,Android,Socializing
+USR_1599,21,Female,TikTok,3.04,4.01,1,240,22,8,3351,3500,Carousel,8.06,iOS,Socializing

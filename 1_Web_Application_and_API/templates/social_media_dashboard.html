@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Pulse Analytics | Social Media Usage & Statistical Analysis</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#312e81',
+            },
+            darkbg: '#0b0f19',
+            darkcard: '#111827',
+            darkborder: '#1f2937'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="bg-gray-50 dark:bg-darkbg text-gray-800 dark:text-gray-100 min-h-screen font-sans antialiased transition-colors duration-200">
+
+  <!-- Top Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-white/90 dark:bg-darkcard/90 backdrop-blur border-b border-gray-200 dark:border-darkborder shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo & Title -->
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center text-white shadow-md shadow-brand-500/20">
+            <i class="fa-solid fa-chart-line text-lg"></i>
+          </div>
+          <div>
+            <h1 class="text-lg font-bold bg-gradient-to-r from-brand-600 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
+              Social Pulse Analytics
+            </h1>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Statistical Analysis & Modeling Platform</p>
+          </div>
+        </div>
+
+        <!-- Global Action Buttons -->
+        <div class="flex items-center space-x-2 sm:space-x-3">
+          <!-- Upload CSV Button -->
+          <button onclick="openModal('uploadModal')" class="inline-flex items-center px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-brand-600 dark:text-indigo-300 hover:bg-indigo-100 dark:hover:bg-indigo-900 border border-indigo-200 dark:border-indigo-800 transition">
+            <i class="fa-solid fa-upload mr-1.5"></i> <span class="hidden sm:inline">Upload</span> CSV
+          </button>
+
+          <!-- Generate Data Button -->
+          <button onclick="openModal('generateModal')" class="inline-flex items-center px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900 border border-emerald-200 dark:border-emerald-800 transition">
+            <i class="fa-solid fa-wand-magic-sparkles mr-1.5"></i> <span class="hidden sm:inline">Generate</span> Data
+          </button>
+
+          <!-- Export Report Menu -->
+          <div class="relative inline-block text-left">
+            <button onclick="toggleExportMenu()" class="inline-flex items-center px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-700 transition">
+              <i class="fa-solid fa-download mr-1.5"></i> Report <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+            </button>
+            <div id="exportDropdown" class="hidden absolute right-0 mt-2 w-48 rounded-xl shadow-lg bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder py-1 z-50">
+              <a href="/api/export-report?format=markdown" class="flex items-center px-4 py-2 text-xs sm:text-sm text-gray-700 dark:text-gray-200 hover:bg-brand-50 dark:hover:bg-gray-800">
+                <i class="fa-brands fa-markdown mr-2 text-blue-500"></i> Markdown Report (.md)
+              </a>
+              <a href="/api/export-report?format=json" class="flex items-center px-4 py-2 text-xs sm:text-sm text-gray-700 dark:text-gray-200 hover:bg-brand-50 dark:hover:bg-gray-800">
+                <i class="fa-solid fa-code mr-2 text-amber-500"></i> JSON Raw Data (.json)
+              </a>
+              <button onclick="resetToDefaultData()" class="w-full text-left flex items-center px-4 py-2 text-xs sm:text-sm text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/50">
+                <i class="fa-solid fa-rotate-left mr-2"></i> Reset to Default Data
+              </button>
+            </div>
+          </div>
+
+          <!-- WhatsApp / Support Contact (9823393443) -->
+          <a href="https://api.whatsapp.com/send?phone=919823393443&text=Hello%20Support%2C%20I%20have%20an%20inquiry%20regarding%20Social%20Media%20Analytics" target="_blank" class="inline-flex items-center px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm transition" title="Contact Support: +91 9823393443">
+            <i class="fa-brands fa-whatsapp text-sm mr-1.5"></i> <span class="hidden sm:inline">Support</span> 9823393443
+          </a>
+
+          <!-- Theme Toggle -->
+          <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2 rounded-lg text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition" title="Toggle Theme">
+            <i id="themeIcon" class="fa-solid fa-sun text-amber-400"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-100 dark:border-darkborder overflow-x-auto no-scrollbar">
+      <nav class="flex space-x-1 sm:space-x-4 py-2 text-sm font-medium whitespace-nowrap" id="tabNav">
+        <button onclick="switchTab('overview')" id="tab-btn-overview" class="tab-btn active-tab px-3 py-1.5 rounded-lg flex items-center gap-2">
+          <i class="fa-solid fa-gauge-high"></i> Overview
+        </button>
+        <button onclick="switchTab('descriptive')" id="tab-btn-descriptive" class="tab-btn inactive-tab px-3 py-1.5 rounded-lg flex items-center gap-2">
+          <i class="fa-solid fa-calculator"></i> Descriptive Stats
+        </button>
+        <button onclick="switchTab('correlations')" id="tab-btn-correlations" class="tab-btn inactive-tab px-3 py-1.5 rounded-lg flex items-center gap-2">
+          <i class="fa-solid fa-circle-nodes"></i> Correlations
+        </button>
+        <button onclick="switchTab('regression')" id="tab-btn-regression" class="tab-btn inactive-tab px-3 py-1.5 rounded-lg flex items-center gap-2">
+          <i class="fa-solid fa-chart-line"></i> Regression Models
+        </button>
+        <button onclick="switchTab('simulator')" id="tab-btn-simulator" class="tab-btn inactive-tab px-3 py-1.5 rounded-lg flex items-center gap-2">
+          <i class="fa-solid fa-wand-magic-sparkles text-purple-400"></i> Predictive Simulator
+        </button>
+        <button onclick="switchTab('hypothesis')" id="tab-btn-hypothesis" class="tab-btn inactive-tab px-3 py-1.5 rounded-lg flex items-center gap-2">
+          <i class="fa-solid fa-vial"></i> Hypothesis & Outliers
+        </button>
+        <button onclick="switchTab('platforms')" id="tab-btn-platforms" class="tab-btn inactive-tab px-3 py-1.5 rounded-lg flex items-center gap-2">
+          <i class="fa-solid fa-users"></i> Platforms & Personas
+        </button>
+        <button onclick="switchTab('datatable')" id="tab-btn-datatable" class="tab-btn inactive-tab px-3 py-1.5 rounded-lg flex items-center gap-2">
+          <i class="fa-solid fa-table"></i> Data Studio
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+
+    <!-- Active Dataset Banner -->
+    <div id="datasetBanner" class="bg-gradient-to-r from-brand-900/30 to-purple-900/30 border border-brand-500/20 rounded-2xl p-4 flex flex-wrap items-center justify-between gap-3 text-sm">
+      <div class="flex items-center gap-3">
+        <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>Active Dataset: <strong id="datasetRecordsCount">{{ total_rows }}</strong> records loaded across <strong id="datasetPlatformCount">6</strong> platforms.</span>
+      </div>
+      <div class="text-xs text-gray-400 flex items-center gap-2">
+        <i class="fa-solid fa-shield-halved text-emerald-400"></i> Statistical Engine: <strong>SciPy & NumPy OLS</strong>
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 1: EXECUTIVE OVERVIEW -->
+    <!-- ========================================================================= -->
+    <section id="tab-overview" class="tab-content block space-y-6">
+      
+      <!-- Top 6 Key KPI Cards -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <!-- Screen Time -->
+        <div class="kpi-card bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-4 shadow-sm hover:border-brand-500/40 transition">
+          <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mb-1">
+            <span>Avg Screen Time</span>
+            <i class="fa-regular fa-clock text-indigo-500 text-sm"></i>
+          </div>
+          <div class="text-2xl font-bold text-gray-900 dark:text-white" id="kpiAvgScreenTime">{{ kpis.avg_screen_time_hours }} <span class="text-xs font-normal text-gray-400">hrs/day</span></div>
+          <div class="text-xs text-gray-500 mt-1">Median: <span id="kpiMedScreenTime">{{ kpis.median_screen_time_hours }}</span> hrs</div>
+        </div>
+
+        <!-- Weekly Posts -->
+        <div class="kpi-card bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-4 shadow-sm hover:border-brand-500/40 transition">
+          <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mb-1">
+            <span>Posts Per Week</span>
+            <i class="fa-regular fa-paper-plane text-blue-500 text-sm"></i>
+          </div>
+          <div class="text-2xl font-bold text-gray-900 dark:text-white" id="kpiAvgPosts">{{ kpis.avg_posts_per_week }}</div>
+          <div class="text-xs text-gray-500 mt-1">Total: <span id="kpiTotalPosts">{{ kpis.total_weekly_posts }}</span>/wk</div>
+        </div>
+
+        <!-- Average Likes -->
+        <div class="kpi-card bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-4 shadow-sm hover:border-brand-500/40 transition">
+          <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mb-1">
+            <span>Avg Likes / Post</span>
+            <i class="fa-regular fa-heart text-rose-500 text-sm"></i>
+          </div>
+          <div class="text-2xl font-bold text-gray-900 dark:text-white" id="kpiAvgLikes">{{ kpis.avg_likes_per_post }}</div>
+          <div class="text-xs text-gray-500 mt-1">Median: <span id="kpiMedLikes">{{ kpis.median_likes_per_post }}</span></div>
+        </div>
+
+        <!-- Average Followers -->
+        <div class="kpi-card bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-4 shadow-sm hover:border-brand-500/40 transition">
+          <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mb-1">
+            <span>Avg Followers</span>
+            <i class="fa-solid fa-user-group text-purple-500 text-sm"></i>
+          </div>
+          <div class="text-2xl font-bold text-gray-900 dark:text-white" id="kpiAvgFollowers">{{ kpis.avg_followers }}</div>
+          <div class="text-xs text-gray-500 mt-1">Median: <span id="kpiMedFollowers">{{ kpis.median_followers }}</span></div>
+        </div>
+
+        <!-- Engagement Rate -->
+        <div class="kpi-card bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-4 shadow-sm hover:border-brand-500/40 transition">
+          <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mb-1">
+            <span>Engagement Rate</span>
+            <i class="fa-solid fa-fire text-amber-500 text-sm"></i>
+          </div>
+          <div class="text-2xl font-bold text-gray-900 dark:text-white" id="kpiAvgEngagement">{{ kpis.avg_engagement_rate }}%</div>
+          <div class="text-xs text-emerald-500 mt-1">Healthy Range</div>
+        </div>
+
+        <!-- Top Platform -->
+        <div class="kpi-card bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-4 shadow-sm hover:border-brand-500/40 transition">
+          <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mb-1">
+            <span>Top Platform</span>
+            <i class="fa-solid fa-trophy text-yellow-500 text-sm"></i>
+          </div>
+          <div class="text-xl font-bold text-brand-600 dark:text-indigo-400 truncate" id="kpiTopPlatform">{{ kpis.top_platform }}</div>
+          <div class="text-xs text-gray-500 mt-1">Highest Market Share</div>
+        </div>
+      </div>
+
+      <!-- Charts Row 1: Platform Share & Screen Time Health -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Platform User Distribution -->
+        <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-sm font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-chart-pie text-brand-500"></i> Platform Distribution
+            </h2>
+          </div>
+          <div class="h-64 relative">
+            <canvas id="platformDonutChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Screen Time Health Index -->
+        <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-sm font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-heart-pulse text-rose-500"></i> Digital Screen Time Health
+            </h2>
+          </div>
+          <div class="h-64 relative">
+            <canvas id="healthDonutChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Content Format Distribution -->
+        <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-sm font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-shapes text-purple-500"></i> Engagement by Content Type
+            </h2>
+          </div>
+          <div class="h-64 relative">
+            <canvas id="postTypeBarChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts Row 2: Average Screen Time vs Likes / Engagement by Platform -->
+      <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h2 class="text-base font-semibold text-gray-900 dark:text-white">Platform Benchmark Metrics Matrix</h2>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Comparing Daily Screen Time (Hrs), Weekly Posts, Average Likes, and Engagement Rate across platforms</p>
+          </div>
+        </div>
+        <div class="h-80 relative">
+          <canvas id="platformMetricsBarChart"></canvas>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 2: DESCRIPTIVE STATISTICS -->
+    <!-- ========================================================================= -->
+    <section id="tab-descriptive" class="tab-content hidden space-y-6">
+      
+      <!-- Descriptive Statistics Table Card -->
+      <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <h2 class="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-calculator text-brand-500"></i> Comprehensive Descriptive Statistics
+            </h2>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Measures of Central Tendency (Mean, Median, Mode), Dispersion (Std Dev, Variance, IQR), and Distribution Shape (Skewness, Kurtosis)</p>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-darkborder">
+          <table class="min-w-full divide-y divide-gray-200 dark:divide-darkborder text-xs sm:text-sm">
+            <thead class="bg-gray-50 dark:bg-gray-900/60 font-semibold text-gray-600 dark:text-gray-300">
+              <tr>
+                <th class="py-3 px-4 text-left">Metric Variable</th>
+                <th class="py-3 px-3 text-right">Mean (μ)</th>
+                <th class="py-3 px-3 text-right">Median (Q2)</th>
+                <th class="py-3 px-3 text-right">Mode</th>
+                <th class="py-3 px-3 text-right">Std Dev (σ)</th>
+                <th class="py-3 px-3 text-right">Variance (σ²)</th>
+                <th class="py-3 px-3 text-right">Min</th>
+                <th class="py-3 px-3 text-right">Max</th>
+                <th class="py-3 px-3 text-right">Q1 (25%)</th>
+                <th class="py-3 px-3 text-right">Q3 (75%)</th>
+                <th class="py-3 px-3 text-right">IQR</th>
+                <th class="py-3 px-3 text-right">Skewness</th>
+                <th class="py-3 px-3 text-right">Kurtosis</th>
+              </tr>
+            </thead>
+            <tbody id="descriptiveStatsTableBody" class="divide-y divide-gray-100 dark:divide-darkborder">
+              <!-- Rendered via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Interactive Metric Distribution Explorer -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Controls & Interpretations -->
+        <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm space-y-4">
+          <h3 class="text-sm font-bold text-gray-900 dark:text-white flex items-center gap-2">
+            <i class="fa-solid fa-sliders text-indigo-500"></i> Distribution Inspector
+          </h3>
+          <div>
+            <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Select Metric to Inspect</label>
+            <select id="metricInspectorSelect" onchange="renderDistributionChart()" class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl px-3 py-2 text-sm focus:ring-2 focus:ring-brand-500">
+              <option value="daily_screen_time_hours">Daily Screen Time (Hours)</option>
+              <option value="weekend_screen_time_hours">Weekend Screen Time (Hours)</option>
+              <option value="posts_per_week">Posts Per Week</option>
+              <option value="avg_likes_per_post">Avg Likes Per Post</option>
+              <option value="total_followers">Total Followers</option>
+              <option value="following_count">Following Count</option>
+              <option value="engagement_rate">Engagement Rate (%)</option>
+              <option value="age">User Age (Years)</option>
+            </select>
+          </div>
+
+          <div id="metricInterpretationBox" class="p-4 rounded-xl bg-gray-50 dark:bg-gray-900/60 border border-gray-200 dark:border-gray-800 space-y-2 text-xs">
+            <div class="font-semibold text-brand-600 dark:text-indigo-400" id="skewnessTitle">Distribution Skewness</div>
+            <p id="skewnessText" class="text-gray-600 dark:text-gray-300"></p>
+            <div class="font-semibold text-purple-600 dark:text-purple-400 mt-2" id="kurtosisTitle">Kurtosis (Tails)</div>
+            <p id="kurtosisText" class="text-gray-600 dark:text-gray-300"></p>
+          </div>
+        </div>
+
+        <!-- Distribution Histogram Chart -->
+        <div class="lg:col-span-2 bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-sm font-semibold text-gray-900 dark:text-white" id="distChartTitle">Frequency Histogram & Probability Distribution</h3>
+          </div>
+          <div class="h-72 relative">
+            <canvas id="distributionHistogramChart"></canvas>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 3: CORRELATIONS -->
+    <!-- ========================================================================= -->
+    <section id="tab-correlations" class="tab-content hidden space-y-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Correlation Heatmap -->
+        <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                <i class="fa-solid fa-circle-nodes text-brand-500"></i> Correlation Heatmap Matrix
+              </h2>
+              <p class="text-xs text-gray-500 dark:text-gray-400">Pearson r correlation coefficients (-1.0 to +1.0)</p>
+            </div>
+            <div class="flex items-center bg-gray-100 dark:bg-gray-800 rounded-lg p-1 text-xs">
+              <button onclick="setCorrMethod('pearson')" id="btnCorrPearson" class="px-2.5 py-1 rounded-md bg-brand-600 text-white font-medium">Pearson</button>
+              <button onclick="setCorrMethod('spearman')" id="btnCorrSpearman" class="px-2.5 py-1 rounded-md text-gray-500 dark:text-gray-400 font-medium">Spearman</button>
+            </div>
+          </div>
+
+          <div class="overflow-x-auto">
+            <div id="correlationHeatmapGrid" class="min-w-full">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Relational Insights List -->
+        <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm space-y-4">
+          <div>
+            <h2 class="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-lightbulb text-amber-500"></i> Statistical Relationship Insights
+            </h2>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Key pairwise correlations sorted by statistical strength</p>
+          </div>
+
+          <div id="correlationInsightsList" class="space-y-3 max-h-[420px] overflow-y-auto pr-1">
+            <!-- Rendered via JS -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Dynamic Scatter & Regression Line Explorer -->
+      <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <h3 class="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-chart-line text-brand-500"></i> Interactive Bivariate Scatter & Trendline Explorer
+            </h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Select any independent (X) and dependent (Y) variable to evaluate scatter distribution and OLS regression line</p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3 text-xs sm:text-sm">
+            <div class="flex items-center gap-1.5">
+              <span class="text-gray-500">X-Axis:</span>
+              <select id="scatterXSelect" onchange="updateCustomScatter()" class="bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-2.5 py-1.5">
+                <option value="daily_screen_time_hours">Daily Screen Time</option>
+                <option value="posts_per_week" selected>Posts Per Week</option>
+                <option value="total_followers">Total Followers</option>
+                <option value="following_count">Following Count</option>
+                <option value="age">Age</option>
+              </select>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="text-gray-500">Y-Axis:</span>
+              <select id="scatterYSelect" onchange="updateCustomScatter()" class="bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-2.5 py-1.5">
+                <option value="avg_likes_per_post" selected>Avg Likes Per Post</option>
+                <option value="total_followers">Total Followers</option>
+                <option value="engagement_rate">Engagement Rate</option>
+                <option value="daily_screen_time_hours">Screen Time</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scatter Stats Banner -->
+        <div id="scatterStatsBanner" class="p-3 bg-brand-50 dark:bg-brand-950/40 border border-brand-200 dark:border-brand-900 rounded-xl text-xs flex flex-wrap items-center justify-between gap-2">
+          <span>Equation: <strong id="scatterEquation" class="font-mono text-brand-600 dark:text-indigo-400">y = mx + c</strong></span>
+          <span>R²: <strong id="scatterR2">0.00</strong></span>
+          <span>Pearson r: <strong id="scatterR">0.00</strong></span>
+          <span>p-value: <strong id="scatterPVal">0.00</strong></span>
+        </div>
+
+        <div class="h-80 relative">
+          <canvas id="customScatterChart"></canvas>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 4: REGRESSION MODELS -->
+    <!-- ========================================================================= -->
+    <section id="tab-regression" class="tab-content hidden space-y-6">
+      
+      <!-- Key Regression Model Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Model 1: Screen Time -> Likes -->
+        <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="px-2 py-0.5 rounded-md bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 text-xs font-semibold">Model A</span>
+            <i class="fa-solid fa-arrow-trend-up text-blue-500"></i>
+          </div>
+          <h3 class="text-sm font-bold text-gray-900 dark:text-white">Screen Time → Average Likes</h3>
+          <div class="font-mono text-xs bg-gray-50 dark:bg-gray-900 p-2.5 rounded-lg text-brand-600 dark:text-indigo-400" id="regModel1Eq">
+            y = 9.1955x + 159.67
+          </div>
+          <div class="text-xs text-gray-500 space-y-1">
+            <div class="flex justify-between"><span>R² Goodness-of-Fit:</span> <strong id="regModel1R2">0.0024</strong></div>
+            <div class="flex justify-between"><span>Slope Impact:</span> <strong>+9.2 likes / hr screen time</strong></div>
+          </div>
+        </div>
+
+        <!-- Model 2: Posts -> Followers -->
+        <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="px-2 py-0.5 rounded-md bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-semibold">Model B</span>
+            <i class="fa-solid fa-users-line text-emerald-500"></i>
+          </div>
+          <h3 class="text-sm font-bold text-gray-900 dark:text-white">Weekly Posts → Followers</h3>
+          <div class="font-mono text-xs bg-gray-50 dark:bg-gray-900 p-2.5 rounded-lg text-emerald-600 dark:text-emerald-400" id="regModel2Eq">
+            Followers = 651.81(Posts) + 1019.95
+          </div>
+          <div class="text-xs text-gray-500 space-y-1">
+            <div class="flex justify-between"><span>R² Score:</span> <strong id="regModel2R2">0.1582</strong></div>
+            <div class="flex justify-between"><span>Slope Impact:</span> <strong>+651.8 followers / weekly post</strong></div>
+          </div>
+        </div>
+
+        <!-- Model 3: Multiple Regression -->
+        <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="px-2 py-0.5 rounded-md bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 text-xs font-semibold">Model C (Multiple)</span>
+            <i class="fa-solid fa-cubes-stacked text-purple-500"></i>
+          </div>
+          <h3 class="text-sm font-bold text-gray-900 dark:text-white">Multiple OLS: Engagement Rate</h3>
+          <div class="font-mono text-xs bg-gray-50 dark:bg-gray-900 p-2.5 rounded-lg text-purple-600 dark:text-purple-400" id="multRegFormula">
+            Engagement = β₀ + β₁ST + β₂Posts + β₃Foll
+          </div>
+          <div class="text-xs text-gray-500 space-y-1">
+            <div class="flex justify-between"><span>Multiple R²:</span> <strong id="multRegR2">0.1389</strong></div>
+            <div class="flex justify-between"><span>Adjusted R²:</span> <strong id="multRegAdjR2">0.1346</strong></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Multiple Regression Feature Importance / Coefficients -->
+      <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm space-y-4">
+        <h3 class="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
+          <i class="fa-solid fa-scale-balanced text-indigo-500"></i> Multiple Regression Beta Coefficients & Feature Weights
+        </h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="multRegCoeffsCards">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 5: PREDICTIVE SIMULATOR -->
+    <!-- ========================================================================= -->
+    <section id="tab-simulator" class="tab-content hidden space-y-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Controls & Sliders (5 cols) -->
+        <div class="lg:col-span-5 bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-6 shadow-sm space-y-6">
+          <div>
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-wand-magic-sparkles text-purple-500"></i> What-If Growth Simulator
+            </h2>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Adjust activity inputs to simulate predicted engagement, expected likes, and follower growth trajectories.</p>
+          </div>
+
+          <!-- Slider 1: Screen Time -->
+          <div class="space-y-2">
+            <div class="flex justify-between text-sm">
+              <label class="font-medium text-gray-700 dark:text-gray-300">Daily Screen Time</label>
+              <span class="font-bold text-brand-600 dark:text-indigo-400" id="simScreenTimeVal">3.5 hrs/day</span>
+            </div>
+            <input type="range" id="simScreenTimeSlider" min="0.5" max="12.0" step="0.25" value="3.5" oninput="runPredictionSimulator()" class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-brand-600">
+            <div class="flex justify-between text-[10px] text-gray-400">
+              <span>0.5 hr (Minimal)</span>
+              <span>4.0 hrs (Avg)</span>
+              <span>12.0 hrs (Heavy)</span>
+            </div>
+          </div>
+
+          <!-- Slider 2: Weekly Posts -->
+          <div class="space-y-2">
+            <div class="flex justify-between text-sm">
+              <label class="font-medium text-gray-700 dark:text-gray-300">Weekly Posts</label>
+              <span class="font-bold text-brand-600 dark:text-indigo-400" id="simPostsVal">4 posts/week</span>
+            </div>
+            <input type="range" id="simPostsSlider" min="0" max="30" step="1" value="4" oninput="runPredictionSimulator()" class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-brand-600">
+            <div class="flex justify-between text-[10px] text-gray-400">
+              <span>0 posts</span>
+              <span>7 posts (Daily)</span>
+              <span>30 posts (Power Creator)</span>
+            </div>
+          </div>
+
+          <!-- Slider 3: Total Followers -->
+          <div class="space-y-2">
+            <div class="flex justify-between text-sm">
+              <label class="font-medium text-gray-700 dark:text-gray-300">Current Total Followers</label>
+              <span class="font-bold text-brand-600 dark:text-indigo-400" id="simFollowersVal">3,500 followers</span>
+            </div>
+            <input type="range" id="simFollowersSlider" min="100" max="100000" step="500" value="3500" oninput="runPredictionSimulator()" class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-brand-600">
+            <div class="flex justify-between text-[10px] text-gray-400">
+              <span>100</span>
+              <span>25,000</span>
+              <span>100,000+</span>
+            </div>
+          </div>
+
+          <!-- Preset Quick Buttons -->
+          <div>
+            <span class="text-xs text-gray-400 block mb-2">Or Choose Profile Preset:</span>
+            <div class="grid grid-cols-3 gap-2 text-xs">
+              <button onclick="setSimPreset(1.5, 1, 800)" class="px-2 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Casual User</button>
+              <button onclick="setSimPreset(4.0, 7, 12000)" class="px-2 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Daily Creator</button>
+              <button onclick="setSimPreset(6.5, 18, 75000)" class="px-2 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Viral Influencer</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Simulation Outputs (7 cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <!-- Pred Engagement -->
+            <div class="bg-white dark:bg-darkcard border border-brand-500/30 rounded-2xl p-4 shadow-sm">
+              <div class="text-xs text-gray-400 mb-1">Predicted Engagement</div>
+              <div class="text-2xl font-bold text-brand-600 dark:text-indigo-400" id="simPredEngagement">7.85%</div>
+              <div class="text-[11px] text-emerald-500 mt-1">Based on OLS Model</div>
+            </div>
+
+            <!-- Pred Likes -->
+            <div class="bg-white dark:bg-darkcard border border-rose-500/30 rounded-2xl p-4 shadow-sm">
+              <div class="text-xs text-gray-400 mb-1">Expected Likes/Post</div>
+              <div class="text-2xl font-bold text-rose-500" id="simPredLikes">234</div>
+              <div class="text-[11px] text-gray-400 mt-1">Per publication</div>
+            </div>
+
+            <!-- Follower Growth Rate -->
+            <div class="bg-white dark:bg-darkcard border border-emerald-500/30 rounded-2xl p-4 shadow-sm">
+              <div class="text-xs text-gray-400 mb-1">Monthly Growth Rate</div>
+              <div class="text-2xl font-bold text-emerald-500" id="simPredGrowthRate">+8.3%</div>
+              <div class="text-[11px] text-gray-400 mt-1">Estimated compound</div>
+            </div>
+
+            <!-- New Monthly Followers -->
+            <div class="bg-white dark:bg-darkcard border border-purple-500/30 rounded-2xl p-4 shadow-sm">
+              <div class="text-xs text-gray-400 mb-1">Est. New Followers</div>
+              <div class="text-2xl font-bold text-purple-500" id="simPredNewFollowers">+290</div>
+              <div class="text-[11px] text-gray-400 mt-1">Per month</div>
+            </div>
+          </div>
+
+          <!-- Growth Projection Chart -->
+          <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm">
+            <h3 class="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+              <i class="fa-solid fa-arrow-trend-up text-emerald-500"></i> 6-Month Follower Growth Projection
+            </h3>
+            <div class="h-60 relative">
+              <canvas id="projectionLineChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Digital Wellbeing & Recommendations -->
+          <div id="simRecommendationCard" class="p-4 rounded-2xl bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-900 text-xs sm:text-sm text-indigo-900 dark:text-indigo-200 flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-indigo-500 text-base mt-0.5"></i>
+            <div>
+              <strong class="block font-semibold mb-0.5">Optimal Strategy Recommendation:</strong>
+              <span id="simRecommendationText">Posting 4 times a week provides an optimal balance between audience growth and healthy screen time.</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 6: HYPOTHESIS TESTING & OUTLIERS -->
+    <!-- ========================================================================= -->
+    <section id="tab-hypothesis" class="tab-content hidden space-y-6">
+      
+      <!-- Hypothesis Testing Grid -->
+      <div>
+        <h2 class="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2 mb-1">
+          <i class="fa-solid fa-vial text-brand-500"></i> Inferential Statistics & Hypothesis Testing
+        </h2>
+        <p class="text-xs text-gray-500 dark:text-gray-400 mb-4">Parametric Tests (Welch's Two-Sample T-Tests, Paired T-Tests, and One-Way ANOVA) evaluated at significance level α = 0.05</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="hypothesisCardsGrid">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+
+      <!-- Outliers & Anomaly Detection -->
+      <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm space-y-4">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-triangle-exclamation text-amber-500"></i> Anomaly & Outlier Detection
+            </h3>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Identified statistical outliers using Z-Score (|Z| > 2.5) and Interquartile Range (IQR Fence) methods</p>
+          </div>
+          <span class="px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 text-xs font-semibold" id="outliersCountBadge">
+            33 Outliers Flagged
+          </span>
+        </div>
+
+        <!-- Metric Bounds Summary -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="outliersMetricSummary">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Top Outlier Users Table -->
+        <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-darkborder mt-4">
+          <table class="min-w-full divide-y divide-gray-200 dark:divide-darkborder text-xs sm:text-sm">
+            <thead class="bg-gray-50 dark:bg-gray-900/60 font-semibold text-gray-600 dark:text-gray-300">
+              <tr>
+                <th class="py-2.5 px-3 text-left">User ID</th>
+                <th class="py-2.5 px-3 text-left">Platform</th>
+                <th class="py-2.5 px-3 text-right">Daily Screen Time</th>
+                <th class="py-2.5 px-3 text-right">Weekly Posts</th>
+                <th class="py-2.5 px-3 text-right">Avg Likes</th>
+                <th class="py-2.5 px-3 text-right">Total Followers</th>
+                <th class="py-2.5 px-3 text-right">Engagement</th>
+                <th class="py-2.5 px-3 text-left">Anomaly Driver</th>
+              </tr>
+            </thead>
+            <tbody id="outliersTableBody" class="divide-y divide-gray-100 dark:divide-darkborder">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 7: PLATFORMS & PERSONAS -->
+    <!-- ========================================================================= -->
+    <section id="tab-platforms" class="tab-content hidden space-y-6">
+      
+      <!-- Behavioral Personas -->
+      <div class="space-y-4">
+        <div>
+          <h2 class="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
+            <i class="fa-solid fa-users text-brand-500"></i> User Behavioral Personas & Segmentation
+          </h2>
+          <p class="text-xs text-gray-500 dark:text-gray-400">Statistical clustering based on posting frequency, screen time, and audience reach</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4" id="personasContainer">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Platform Radar & Detailed Comparison -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Radar Chart -->
+        <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm">
+          <h3 class="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-spider text-indigo-500"></i> Platform Characteristic Radar
+          </h3>
+          <div class="h-72 relative">
+            <canvas id="platformRadarChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Platform Table -->
+        <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm space-y-3">
+          <h3 class="text-sm font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+            <i class="fa-solid fa-list-check text-emerald-500"></i> Platform Breakdown Benchmarks
+          </h3>
+          <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-darkborder">
+            <table class="min-w-full divide-y divide-gray-200 dark:divide-darkborder text-xs">
+              <thead class="bg-gray-50 dark:bg-gray-900/60 font-semibold text-gray-600 dark:text-gray-300">
+                <tr>
+                  <th class="py-2.5 px-3 text-left">Platform</th>
+                  <th class="py-2.5 px-3 text-right">Users %</th>
+                  <th class="py-2.5 px-3 text-right">Screen Time</th>
+                  <th class="py-2.5 px-3 text-right">Posts/Wk</th>
+                  <th class="py-2.5 px-3 text-right">Avg Likes</th>
+                  <th class="py-2.5 px-3 text-right">Engagement</th>
+                </tr>
+              </thead>
+              <tbody id="platformTableBody" class="divide-y divide-gray-100 dark:divide-darkborder">
+                <!-- Populated by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 8: DATA STUDIO -->
+    <!-- ========================================================================= -->
+    <section id="tab-datatable" class="tab-content hidden space-y-6">
+      
+      <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl p-5 shadow-sm space-y-4">
+        
+        <!-- Header & Search/Filter Controls -->
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <h2 class="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-table text-brand-500"></i> Live Data Studio
+            </h2>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Search, filter, and inspect raw social media activity records</p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <!-- Platform filter -->
+            <select id="dataTablePlatformFilter" onchange="loadDataTable(1)" class="bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-1.5 text-xs sm:text-sm">
+              <option value="All">All Platforms</option>
+              <option value="Instagram">Instagram</option>
+              <option value="TikTok">TikTok</option>
+              <option value="YouTube">YouTube</option>
+              <option value="Twitter/X">Twitter/X</option>
+              <option value="LinkedIn">LinkedIn</option>
+              <option value="Facebook">Facebook</option>
+            </select>
+
+            <!-- Search input -->
+            <div class="relative">
+              <input type="text" id="dataTableSearchInput" placeholder="Search records..." oninput="debounceSearch()" class="bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg pl-8 pr-3 py-1.5 text-xs sm:text-sm focus:ring-2 focus:ring-brand-500 w-40 sm:w-56">
+              <i class="fa-solid fa-magnifying-glass absolute left-2.5 top-2.5 text-gray-400 text-xs"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Table -->
+        <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-darkborder">
+          <table class="min-w-full divide-y divide-gray-200 dark:divide-darkborder text-xs sm:text-sm">
+            <thead class="bg-gray-50 dark:bg-gray-900/60 font-semibold text-gray-600 dark:text-gray-300">
+              <tr>
+                <th class="py-3 px-3 text-left">User ID</th>
+                <th class="py-3 px-3 text-left">Platform</th>
+                <th class="py-3 px-3 text-right">Screen Time (h)</th>
+                <th class="py-3 px-3 text-right">Posts/Wk</th>
+                <th class="py-3 px-3 text-right">Likes</th>
+                <th class="py-3 px-3 text-right">Followers</th>
+                <th class="py-3 px-3 text-left">Post Type</th>
+                <th class="py-3 px-3 text-right">Engagement</th>
+                <th class="py-3 px-3 text-left">Device</th>
+                <th class="py-3 px-3 text-left">Purpose</th>
+              </tr>
+            </thead>
+            <tbody id="rawDataTableBody" class="divide-y divide-gray-100 dark:divide-darkborder font-mono text-xs">
+              <!-- Populated via JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 pt-2">
+          <div>
+            Showing page <span id="dataCurrentPage" class="font-bold text-gray-900 dark:text-white">1</span> of <span id="dataTotalPages" class="font-bold text-gray-900 dark:text-white">1</span> (<span id="dataTotalRecordsCount">0</span> total records)
+          </div>
+          <div class="flex items-center space-x-2">
+            <button onclick="prevDataPage()" id="btnPrevPage" class="px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 disabled:opacity-50">
+              <i class="fa-solid fa-chevron-left mr-1"></i> Prev
+            </button>
+            <button onclick="nextDataPage()" id="btnNextPage" class="px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 disabled:opacity-50">
+              Next <i class="fa-solid fa-chevron-right ml-1"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: UPLOAD CUSTOM CSV -->
+  <!-- ========================================================================= -->
+  <div id="uploadModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl max-w-lg w-full p-6 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between">
+        <h3 class="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
+          <i class="fa-solid fa-cloud-arrow-up text-brand-500"></i> Upload Custom CSV Dataset
+        </h3>
+        <button onclick="closeModal('uploadModal')" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <p class="text-xs text-gray-500 dark:text-gray-400">
+        Upload your own social media dataset CSV. The system will automatically compute all descriptive statistics, correlation matrices, and regression models.
+      </p>
+
+      <form id="uploadCsvForm" onsubmit="handleCsvUpload(event)" class="space-y-4">
+        <div class="border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-xl p-6 text-center hover:border-brand-500 transition cursor-pointer" onclick="document.getElementById('csvFileInput').click()">
+          <i class="fa-solid fa-file-csv text-3xl text-brand-500 mb-2"></i>
+          <p class="text-sm font-medium text-gray-700 dark:text-gray-300" id="uploadFileNameDisplay">Click to browse or drag and drop CSV file</p>
+          <p class="text-xs text-gray-400 mt-1">Supports UTF-8 CSV files up to 16MB</p>
+          <input type="file" id="csvFileInput" name="file" accept=".csv" class="hidden" onchange="onFileSelected(this)">
+        </div>
+
+        <div class="flex justify-end gap-3">
+          <button type="button" onclick="closeModal('uploadModal')" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
+            Cancel
+          </button>
+          <button type="submit" id="btnSubmitUpload" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-brand-600 hover:bg-brand-700 text-white shadow-md">
+            Analyze CSV
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: GENERATE SYNTHETIC DATASET -->
+  <!-- ========================================================================= -->
+  <div id="generateModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-darkcard border border-gray-200 dark:border-darkborder rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between">
+        <h3 class="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
+          <i class="fa-solid fa-wand-magic-sparkles text-emerald-500"></i> Generate Synthetic Dataset
+        </h3>
+        <button onclick="closeModal('generateModal')" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <p class="text-xs text-gray-500 dark:text-gray-400">
+        Generate a statistically calibrated random social media dataset to test sample size scaling.
+      </p>
+
+      <form id="generateDataForm" onsubmit="handleGenerateData(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">Number of User Records</label>
+          <select id="generateRecordCount" class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl px-3 py-2 text-sm">
+            <option value="300">300 Records (Fast)</option>
+            <option value="600" selected>600 Records (Standard Benchmark)</option>
+            <option value="1200">1,200 Records (Expanded Sample)</option>
+            <option value="2500">2,500 Records (Large Scale)</option>
+          </select>
+        </div>
+
+        <div class="flex justify-end gap-3">
+          <button type="button" onclick="closeModal('generateModal')" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
+            Cancel
+          </button>
+          <button type="submit" id="btnSubmitGenerate" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium bg-emerald-600 hover:bg-emerald-700 text-white shadow-md">
+            Generate & Recalculate
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="fixed bottom-5 right-5 z-50 space-y-2"></div>
+
+  <!-- Footer -->
+  <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-xs text-gray-400 border-t border-gray-200 dark:border-darkborder mt-12">
+    <p>Social Pulse Analytics &bull; Statistical Social Media Intelligence & Modeling Engine &bull; Python 3.14 & Flask</p>
+  </footer>
+
+  <!-- Dashboard JavaScript -->
+  <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

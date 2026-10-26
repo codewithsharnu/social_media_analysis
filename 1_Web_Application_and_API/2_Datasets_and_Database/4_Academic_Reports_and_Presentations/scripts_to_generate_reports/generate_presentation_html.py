@@ -1,0 +1,440 @@
+"""
+Generate standalone interactive HTML presentation deck: Social_Pulse_Analytics_Presentation.html
+"""
+
+import os
+
+HTML_PATH = r"c:\Users\lenovo\OneDrive\Desktop\SQL\Social_Pulse_Analytics_Presentation.html"
+
+html_content = """<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Pulse Analytics | Presentation Deck</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body { background-color: #0b0f19; font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; }
+    .slide { display: none; min-height: 85vh; }
+    .slide.active { display: flex; flex-direction: column; justify-content: space-between; }
+    .glass-card { background: #111827; border: 1px solid #1f2937; border-radius: 1rem; }
+  </style>
+</head>
+<body class="text-gray-100 flex flex-col min-h-screen p-4 sm:p-8 justify-between">
+
+  <!-- Header / Navigation Bar -->
+  <header class="max-w-6xl w-full mx-auto flex items-center justify-between border-b border-gray-800 pb-4">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/30">
+        <i class="fa-solid fa-chart-line text-lg"></i>
+      </div>
+      <div>
+        <h1 class="font-bold text-base sm:text-lg text-white">Social Pulse Analytics</h1>
+        <p class="text-xs text-indigo-400">Statistical Analysis & Machine Learning Deck</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="text-xs text-gray-400 mr-2" id="slideIndicator">Slide 1 / 12</span>
+      <button onclick="prevSlide()" class="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-300 transition">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button onclick="nextSlide()" class="p-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white transition">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Slide Container -->
+  <main class="max-w-6xl w-full mx-auto my-6 flex-1 flex flex-col justify-center">
+
+    <!-- SLIDE 1: TITLE -->
+    <div class="slide active" data-slide="1">
+      <div class="space-y-3">
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-950 text-indigo-300 border border-indigo-800 inline-block">
+          STATISTICS FOR MACHINE LEARNING • INTERACTIVE WEB LAB
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+          SOCIAL PULSE ANALYTICS
+        </h2>
+        <p class="text-base sm:text-lg text-gray-400 max-w-3xl">
+          An Interactive Exploratory Data Analysis, Statistical Modeling & Predictive Simulation Platform
+          <br><span class="text-indigo-400 font-mono text-sm">Live Host: https://sharnu2009.pythonanywhere.com</span>
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+        <div class="glass-card p-6 border-t-4 border-sky-400">
+          <h3 class="font-bold text-sky-400 text-lg mb-2">Core Dataset</h3>
+          <p class="text-sm text-gray-300">600 active social media users across 6 platforms (Instagram, TikTok, YouTube, Twitter/X, LinkedIn, Facebook) with 16 behavioral metrics.</p>
+        </div>
+        <div class="glass-card p-6 border-t-4 border-emerald-400">
+          <h3 class="font-bold text-emerald-400 text-lg mb-2">Statistical Engine</h3>
+          <p class="text-sm text-gray-300">Powered by Python (SciPy & NumPy) covering descriptive moments, Welch's t-test, ANOVA, Pearson/Spearman correlation, and OLS regression.</p>
+        </div>
+        <div class="glass-card p-6 border-t-4 border-indigo-500">
+          <h3 class="font-bold text-indigo-400 text-lg mb-2">Pedagogical Mission</h3>
+          <p class="text-sm text-gray-300">A zero-code visual sandbox designed to bridge abstract statistical equations with practical Machine Learning intuition.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: THE BIG PICTURE -->
+    <div class="slide" data-slide="2">
+      <div class="space-y-2">
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-950 text-sky-300 border border-sky-800 inline-block">
+          SECTION 1 • PURPOSE & CONCEPT
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white">What is Social Pulse Analytics?</h2>
+        <p class="text-sm text-gray-400">A flight simulator for data science students to touch and explore math concepts</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+        <div class="glass-card p-5 border-l-4 border-rose-500">
+          <h3 class="font-bold text-rose-400 mb-1">The Problem with Traditional Stats</h3>
+          <p class="text-xs text-gray-300 leading-relaxed">Static textbook formulas (variance, skewness, regression lines) feel disconnected from real machine learning pipelines without interactive feedback.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-sky-400">
+          <h3 class="font-bold text-sky-400 mb-1">The Interactive Solution</h3>
+          <p class="text-xs text-gray-300 leading-relaxed">A live web dashboard where students click, drag sliders, and run A/B hypothesis tests in real time using 600 realistic creator records.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-emerald-400">
+          <h3 class="font-bold text-emerald-400 mb-1">Three Pillars Taught</h3>
+          <p class="text-xs text-gray-300 leading-relaxed">1. Descriptive Moments & Data Shapes (Mean, Skew, Kurtosis)<br>2. Supervised Learning via OLS Regression<br>3. Inferential Testing & Outlier Cleaning</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-purple-400">
+          <h3 class="font-bold text-purple-400 mb-1">Zero-Code to Code Bridge</h3>
+          <p class="text-xs text-gray-300 leading-relaxed">Builds deep mental models and visual confidence before students write Python, pandas, scikit-learn, or SQL code.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: TAB 1 OVERVIEW -->
+    <div class="slide" data-slide="3">
+      <div class="space-y-2">
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-950 text-indigo-300 border border-indigo-800 inline-block">
+          TAB 1 • EXPLORATORY DATA ANALYSIS
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white">Tab 1: Executive Overview (The Scoreboard)</h2>
+        <p class="text-sm text-gray-400">First contact with data: Summary KPIs and categorical breakdowns</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+        <div class="glass-card p-5 border-l-4 border-indigo-500">
+          <h3 class="font-bold text-indigo-400 mb-1">Screen Time Patterns</h3>
+          <p class="text-xs text-gray-300">Average daily screen time is 3.75 hrs (Median: 3.41 hrs). 55% of users fall in the moderate 2.5-5h bracket.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-amber-400">
+          <h3 class="font-bold text-amber-400 mb-1">Mean vs. Median Gap</h3>
+          <p class="text-xs text-gray-300">Avg Likes: 194.2 vs. Median: 80.0<br>Avg Followers: 4,622 vs. Median: 1,140<br>Immediate proof of extreme viral outliers pulling up the mean!</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-sky-400">
+          <h3 class="font-bold text-sky-400 mb-1">Platform Share</h3>
+          <p class="text-xs text-gray-300">Instagram commands 31.2%, TikTok 24.5%, Twitter/X 17.2%, YouTube 13.5%, LinkedIn 7.3%, and Facebook 6.3%.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-emerald-400">
+          <h3 class="font-bold text-emerald-400 mb-1">Format Superiority</h3>
+          <p class="text-xs text-gray-300">Reels/Videos achieve highest engagement (9.53%), followed by Carousels (8.33%), Photos (6.79%), and Text (5.23%).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4: TAB 2 DESCRIPTIVE STATS -->
+    <div class="slide" data-slide="4">
+      <div class="space-y-2">
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-950 text-purple-300 border border-purple-800 inline-block">
+          TAB 2 • DISTRIBUTION MOMENTS & SHAPES
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white">Tab 2: Descriptive Statistics & Data Shapes</h2>
+        <p class="text-sm text-gray-400">Central Tendency, Dispersion, and Higher-Order Moments (Skewness & Kurtosis)</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+        <div class="glass-card p-5 border-l-4 border-indigo-500">
+          <h3 class="font-bold text-indigo-400 mb-1">Moments of Distribution</h3>
+          <p class="text-xs text-gray-300">Calculates Mean (μ), Median (Q2), Mode, Standard Deviation (σ), Variance (σ²), and Interquartile Range (IQR).</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-rose-500">
+          <h3 class="font-bold text-rose-400 mb-1">Skewness (Tail Direction)</h3>
+          <p class="text-xs text-gray-300">Followers (+8.17) and Likes (+4.77) exhibit extreme positive right-skew: massive volume of casual users, tiny elite of viral stars.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-purple-400">
+          <h3 class="font-bold text-purple-400 mb-1">Kurtosis (Tails & Outliers)</h3>
+          <p class="text-xs text-gray-300">Followers kurtosis is +97.0 (Leptokurtic). Heavy-tailed distribution warns of rare extreme events and high variance.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-emerald-400">
+          <h3 class="font-bold text-emerald-400 mb-1">Machine Learning Implication</h3>
+          <p class="text-xs text-gray-300">Teaches why linear algorithms fail on raw data and why Log Transforms [log(1+x)] are mandatory before model training.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5: TAB 3 CORRELATIONS -->
+    <div class="slide" data-slide="5">
+      <div class="space-y-2">
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-300 border border-emerald-800 inline-block">
+          TAB 3 • FEATURE ASSOCIATIONS & COLLINEARITY
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white">Tab 3: Correlation Matrix (Pearson vs. Spearman)</h2>
+        <p class="text-sm text-gray-400">Spotting strong relationships and collinearity before training models</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+        <div class="glass-card p-5 border-l-4 border-emerald-400">
+          <h3 class="font-bold text-emerald-400 mb-1">Likes & Followers (r = +0.88)</h3>
+          <p class="text-xs text-gray-300">Strong positive linear relationship. Accounts with high followers consistently capture higher aggregate likes.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-rose-500">
+          <h3 class="font-bold text-rose-400 mb-1">Followers & Engagement (r = -0.31)</h3>
+          <p class="text-xs text-gray-300">Crucial negative correlation! As follower count balloons, community engagement % drops (audience dilution effect).</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-amber-400">
+          <h3 class="font-bold text-amber-400 mb-1">Pearson vs. Spearman Dual Engine</h3>
+          <p class="text-xs text-gray-300">Pearson tests straight-line trends; Spearman evaluates rank-order monotonicity (Spearman ρ = -0.51 for Followers vs Engagement).</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-sky-400">
+          <h3 class="font-bold text-sky-400 mb-1">Interactive Scatter & Trendline</h3>
+          <p class="text-xs text-gray-300">Select any X and Y axis to evaluate real-time scatter plots, empirical OLS regression line, R², and p-values.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 6: TAB 4 REGRESSION -->
+    <div class="slide" data-slide="6">
+      <div class="space-y-2">
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-950 text-sky-300 border border-sky-800 inline-block">
+          TAB 4 • SUPERVISED MACHINE LEARNING
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white">Tab 4: Regression Models (OLS in Action)</h2>
+        <p class="text-sm text-gray-400">Fitting linear equations: Simple Linear Regression and Multiple OLS</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+        <div class="glass-card p-5 border-l-4 border-rose-500">
+          <h3 class="font-bold text-rose-400 mb-1">Model A: Screen Time -> Likes</h3>
+          <p class="text-xs text-gray-300">Likes = 9.20(ScreenTime) + 159.67 (R² = 0.0024). Fails completely! Simply scrolling for hours has zero predictive power over creative success.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-emerald-400">
+          <h3 class="font-bold text-emerald-400 mb-1">Model B: Weekly Posts -> Followers</h3>
+          <p class="text-xs text-gray-300">Followers = 651.81(Posts) + 1019.95 (R² = 0.1582). Statistically significant slope: each additional post adds ~652 followers.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-indigo-500">
+          <h3 class="font-bold text-indigo-400 mb-1">Model C: Multiple OLS Regression</h3>
+          <p class="text-xs text-gray-300">Engagement = 9.14 - 0.012(ST) - 0.124(Posts) - 0.00007(Followers). Multiple R² = 0.1389 | Adjusted R² = 0.1346.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-purple-400">
+          <h3 class="font-bold text-purple-400 mb-1">The Lesson of Adjusted R²</h3>
+          <p class="text-xs text-gray-300">Explains why Adjusted R² penalizes adding useless predictors, protecting models from overfitting.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 7: TAB 5 PREDICTIVE SIMULATOR -->
+    <div class="slide" data-slide="7">
+      <div class="space-y-2">
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-950 text-purple-300 border border-purple-800 inline-block">
+          TAB 5 • WHAT-IF INFERENCE & PRODUCTION AI
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white">Tab 5: Predictive Simulator (The 'What-If' Engine)</h2>
+        <p class="text-sm text-gray-400">Deploying trained regression models into an interactive production interface</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+        <div class="glass-card p-5 border-l-4 border-sky-400">
+          <h3 class="font-bold text-sky-400 mb-1">Interactive Sliders</h3>
+          <p class="text-xs text-gray-300">Students adjust Daily Screen Time (0.5 - 12h), Weekly Posts (0 - 30), and Current Followers (100 - 100k+).</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-emerald-400">
+          <h3 class="font-bold text-emerald-400 mb-1">Instant Model Inference</h3>
+          <p class="text-xs text-gray-300">Feeds inputs live into OLS weights: outputs predicted engagement rate %, expected likes per post, and compound monthly growth.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-indigo-500">
+          <h3 class="font-bold text-indigo-400 mb-1">6-Month Growth Trajectory</h3>
+          <p class="text-xs text-gray-300">Dynamically calculates compounded audience growth curves over a 6-month horizon using exponential modeling.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-amber-400">
+          <h3 class="font-bold text-amber-400 mb-1">Digital Wellbeing Advisor</h3>
+          <p class="text-xs text-gray-300">Warns creators when screen time exceeds healthy returns, suggesting optimal posting cadence.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 8: TAB 6 HYPOTHESIS TESTING -->
+    <div class="slide" data-slide="8">
+      <div class="space-y-2">
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-rose-950 text-rose-300 border border-rose-800 inline-block">
+          TAB 6 • INFERENTIAL STATISTICS (α = 0.05)
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white">Tab 6: Hypothesis Testing (Real Facts vs. Luck)</h2>
+        <p class="text-sm text-gray-400">Parametric tests: Welch's t-test, Paired t-test, and One-Way ANOVA</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+        <div class="glass-card p-5 border-l-4 border-emerald-400">
+          <h3 class="font-bold text-emerald-400 mb-1">Weekend vs. Weekday Screen Time</h3>
+          <p class="text-xs text-gray-300">Paired t-Test: t = 36.74, p &lt; 0.0001 (Reject H₀). Weekend usage is significantly higher by +0.77 hours. Overwhelming proof!</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-amber-400">
+          <h3 class="font-bold text-amber-400 mb-1">Screen Time vs. Engagement Rate</h3>
+          <p class="text-xs text-gray-300">Welch's Two-Sample t-Test: t = -0.595, p = 0.552 (Fail to Reject H₀). High screen time does not statistically alter engagement.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-indigo-500">
+          <h3 class="font-bold text-indigo-400 mb-1">Post Format Performance</h3>
+          <p class="text-xs text-gray-300">One-Way ANOVA: F = 27.10, p &lt; 0.001 (Reject H₀). Statistically proves format drives engagement (Video &gt; Carousel &gt; Photo &gt; Text).</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-purple-400">
+          <h3 class="font-bold text-purple-400 mb-1">Platform Screen Time Differences</h3>
+          <p class="text-xs text-gray-300">One-Way ANOVA: F = 11.83, p &lt; 0.001 (Reject H₀). Screen time differs significantly by platform (TikTok/Instagram command highest attention).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 9: TAB 6 OUTLIERS -->
+    <div class="slide" data-slide="9">
+      <div class="space-y-2">
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-950 text-amber-300 border border-amber-800 inline-block">
+          TAB 6 (PART 2) • DATA CLEANING & ANOMALIES
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white">Tab 6: Anomaly & Outlier Detection</h2>
+        <p class="text-sm text-gray-400">Parametric Z-Score (|Z| &gt; 2.5) vs. Non-Parametric Tukey IQR Fences</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+        <div class="glass-card p-5 border-l-4 border-rose-500">
+          <h3 class="font-bold text-rose-400 mb-1">The Outlier Hazard in ML</h3>
+          <p class="text-xs text-gray-300">Social datasets contain viral bots and mega-influencers that drag regression lines and ruin generalizability.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-emerald-400">
+          <h3 class="font-bold text-emerald-400 mb-1">Tukey's IQR Fence Method</h3>
+          <p class="text-xs text-gray-300">Bounds: [Q1 - 1.5*IQR, Q3 + 1.5*IQR]. Identifies 116 posting frequency outliers and 79 follower outliers without assuming normality.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-amber-400">
+          <h3 class="font-bold text-amber-400 mb-1">Parametric Z-Score Masking</h3>
+          <p class="text-xs text-gray-300">Z-Score flags only 19 post outliers! Why? Extreme values inflate the sample standard deviation (σ), widening the acceptance window.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-sky-400">
+          <h3 class="font-bold text-sky-400 mb-1">Core Takeaway for Students</h3>
+          <p class="text-xs text-gray-300">Demonstrates why robust statistics (IQR, Median Absolute Deviation) are essential for real-world ML preprocessing.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 10: TABS 7 & 8 -->
+    <div class="slide" data-slide="10">
+      <div class="space-y-2">
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-950 text-indigo-300 border border-indigo-800 inline-block">
+          TABS 7 & 8 • SEGMENTATION & LIVE STUDIO
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white">Tabs 7 & 8: Personas & Live Data Studio</h2>
+        <p class="text-sm text-gray-400">Unsupervised segmentation concepts and raw spreadsheet inspection</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+        <div class="glass-card p-5 border-l-4 border-purple-400">
+          <h3 class="font-bold text-purple-400 mb-1">Behavioral Personas</h3>
+          <p class="text-xs text-gray-300">5 Rule-Based Clusters: High-Impact Influencers (54), Active Creators (114), Passive Lurkers (88), Casual (140), Minimalists (17).</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-indigo-500">
+          <h3 class="font-bold text-indigo-400 mb-1">Platform Radar Benchmark</h3>
+          <p class="text-xs text-gray-300">Normalizes 5 dimensions on a 0-100 scale: visualizes centroids across Screen Time, Posts, Likes, and Engagement.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-sky-400">
+          <h3 class="font-bold text-sky-400 mb-1">Live Data Studio</h3>
+          <p class="text-xs text-gray-300">Search, filter by platform, and paginate through all 600 raw records like an interactive Excel sheet.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-emerald-400">
+          <h3 class="font-bold text-emerald-400 mb-1">Upload CSV & Generate Data</h3>
+          <p class="text-xs text-gray-300">Upload your own class CSV file, or generate N = 300 to 2,500 rows to watch the Central Limit Theorem in action.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 11: TEACHING IDEAS -->
+    <div class="slide" data-slide="11">
+      <div class="space-y-2">
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-300 border border-emerald-800 inline-block">
+          CURRICULAR INTEGRATION • LAB ASSIGNMENTS
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white">How Teachers Can Use This in Class</h2>
+        <p class="text-sm text-gray-400">Hands-on student exercises connecting statistics to Machine Learning</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+        <div class="glass-card p-5 border-l-4 border-amber-400">
+          <h3 class="font-bold text-amber-400 mb-1">Lab 1: The Mean vs. Median Trap</h3>
+          <p class="text-xs text-gray-300">Ask students to inspect Tab 2 and explain why Average Likes is 194 while Median is 80. How would an ML model be affected?</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-sky-400">
+          <h3 class="font-bold text-sky-400 mb-1">Lab 2: Spurious vs. True Correlations</h3>
+          <p class="text-xs text-gray-300">Have students compare Screen Time vs Likes (r = 0.05) against Posts vs Likes (r = 0.48) in Tab 3.</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-indigo-500">
+          <h3 class="font-bold text-indigo-400 mb-1">Lab 3: Regression Interpretation</h3>
+          <p class="text-xs text-gray-300">Analyze the Multiple Regression beta weights in Tab 4. Why is the follower coefficient negative for engagement?</p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-emerald-400">
+          <h3 class="font-bold text-emerald-400 mb-1">Lab 4: Central Limit Theorem</h3>
+          <p class="text-xs text-gray-300">Use 'Generate Data' (Tab 8) to scale from N=300 to N=2500 and observe how standard errors shrink and p-values sharpen.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 12: CONCLUSION & ARTIFACTS -->
+    <div class="slide" data-slide="12">
+      <div class="space-y-2">
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-950 text-indigo-300 border border-indigo-800 inline-block">
+          SUMMARY & ACCESS • PROJECT ARTIFACTS
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white">Summary & Available Resources</h2>
+        <p class="text-sm text-gray-400">Everything is deployed live on the cloud and saved in your local workspace</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+        <div class="glass-card p-5 border-l-4 border-emerald-400">
+          <h3 class="font-bold text-emerald-400 mb-1">Live Cloud Application</h3>
+          <p class="text-xs text-gray-300 font-mono">https://sharnu2009.pythonanywhere.com<br><span class="text-gray-400 font-sans">Active 24/7 with zero local computer setup needed.</span></p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-sky-400">
+          <h3 class="font-bold text-sky-400 mb-1">SQLite Database File</h3>
+          <p class="text-xs text-gray-300 font-mono">social_media_analytics.db<br><span class="text-gray-400 font-sans">600 records ready for SQL queries in DB Browser or VS Code.</span></p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-indigo-500">
+          <h3 class="font-bold text-indigo-400 mb-1">Full SQL Dump Script</h3>
+          <p class="text-xs text-gray-300 font-mono">social_media_database.sql<br><span class="text-gray-400 font-sans">Complete CREATE TABLE and 600 INSERT statements for MySQL/PostgreSQL.</span></p>
+        </div>
+        <div class="glass-card p-5 border-l-4 border-purple-400">
+          <h3 class="font-bold text-purple-400 mb-1">PowerPoint Deck</h3>
+          <p class="text-xs text-gray-300 font-mono">Social_Pulse_Analytics_Presentation.pptx<br><span class="text-gray-400 font-sans">12 high-end widescreen slides ready for classroom presentation.</span></p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer Navigation -->
+  <footer class="max-w-6xl w-full mx-auto flex items-center justify-between border-t border-gray-800 pt-4 text-xs text-gray-500">
+    <span>Social Pulse Analytics • Statistical Education Deck</span>
+    <span class="hidden sm:inline">Use Left/Right Arrow keys on your keyboard to navigate</span>
+    <span class="text-indigo-400">sharnu2009.pythonanywhere.com</span>
+  </footer>
+
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 12;
+
+    function showSlide(num) {
+      if (num < 1) num = 1;
+      if (num > totalSlides) num = totalSlides;
+      currentSlide = num;
+
+      document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+      const activeSlide = document.querySelector(`.slide[data-slide="${currentSlide}"]`);
+      if (activeSlide) activeSlide.classList.add('active');
+
+      document.getElementById('slideIndicator').textContent = `Slide ${currentSlide} / ${totalSlides}`;
+    }
+
+    function nextSlide() { showSlide(currentSlide + 1); }
+    function prevSlide() { showSlide(currentSlide - 1); }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+  </script>
+</body>
+</html>
+"""
+
+with open(HTML_PATH, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print(f"HTML Presentation successfully saved to: {HTML_PATH}")
